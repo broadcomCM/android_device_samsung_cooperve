@@ -57,7 +57,6 @@ PRODUCT_PACKAGES += \
     broadcom \
     libOmxCore \
     #gralloc.default \
-PRODUCT_PACKAGES += \
     SamsungServiceMode \
     libcopybit \
     toggleshutter \
