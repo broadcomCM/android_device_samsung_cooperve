@@ -34,15 +34,15 @@ BOARD_HAS_SAMSUNG_VOLUME_BUG := true
 
 
 # Use the non-open-source parts, if they're present
--include vendor/samsung/totoro/BoardConfigVendor.mk
+-include vendor/samsung/coperve/BoardConfigVendor.mk
 
 TARGET_BOARD_PLATFORM := bcm21553
 TARGET_ARCH_VARIANT := armv6-vfp
 TARGET_CPU_ABI := armeabi-v6l
 TARGET_CPU_ABI2 := armeabi
-TARGET_BOOTLOADER_BOARD_NAME := totoro
+TARGET_BOOTLOADER_BOARD_NAME := cooperve
 
-TARGET_OTA_ASSERT_DEVICE := totoro,GT-S5360
+TARGET_OTA_ASSERT_DEVICE := cooperve,GT-S5830i
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_PROVIDES_INIT := true
@@ -58,7 +58,7 @@ BOARD_USE_JPEG := true
 HOST_JDK_IS_64BIT_VERSION := true
 
 #3D
-BOARD_EGL_CFG := device/samsung/totoro/egl.cfg
+BOARD_EGL_CFG := device/samsung/cooperve/egl.cfg
 TARGET_PROVIDES_GRALLOC := true
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
@@ -84,10 +84,10 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 5242880
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 241172480
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 206831616
 BOARD_FLASH_BLOCK_SIZE := 4096
-TARGET_RECOVERY_INITRC := device/samsung/totoro/recovery.rc
+TARGET_RECOVERY_INITRC := device/samsung/cooperve/recovery.rc
 BOARD_LDPI_RECOVERY := true
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/totoro/recovery/recovery_ui.c
-TARGET_PREBUILT_KERNEL := device/samsung/totoro/kernel
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/cooperve/recovery/recovery_ui.c
+TARGET_PREBUILT_KERNEL := device/samsung/cooperve/kernel
 
 
 # JIT / Optimizations
