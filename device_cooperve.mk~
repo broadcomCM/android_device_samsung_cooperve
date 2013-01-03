@@ -225,7 +225,7 @@ vendor/samsung/cooperve/proprietary/system/lib/hw/sensors.default.so:system/lib/
 vendor/samsung/cooperve/proprietary/system/lib/hw/sensors.goldfish.so:system/lib/hw/sensors.goldfish.so \
 vendor/samsung/cooperve/proprietary/system/lib/libaccsensorcal.so:system/lib/libaccsensorcal.so \
 vendor/samsung/cooperve/proprietary/system/lib/libaccsensorcaltest.so:system/lib/libaccsensorcaltest.so \
-#vendor/samsung/cooperve/proprietary/system/lib/libaccelcal.so:system/lib/libaccelcal.so \
+vendor/samsung/cooperve/proprietary/system/lib/libaccelcal.so:system/lib/libaccelcal.so \
 
 
 #keychars
