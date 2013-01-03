@@ -315,10 +315,7 @@ vendor/samsung/cooperve/proprietary/system/lib/modules/gememalloc.ko:system/lib/
 vendor/samsung/cooperve/proprietary/system/lib/modules/h6270enc.ko:system/lib/modules/h6270enc.ko \
 vendor/samsung/cooperve/proprietary/system/lib/modules/hx170dec.ko:system/lib/modules/hx170dec.ko 
 
-#HW Ddrivers
-PRODUCT_COPY_FILES += \
-device/samsung/cooperve/prebuilt/lib/egl/libGLES_hgl.so:system/lib/egl \
-device/samsung/cooperve/prebuilt/lib/hw/gralloc.default.so:system/lib/hw 
+
 
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
