@@ -23,6 +23,7 @@ rild.libpath=/system/lib/libbrcm_ril.so
 ro.telephony.ril_class=samsung
 rild.libargs=-d /dev/smd0
 DEVICE_PROVISIONED=1
+ro.sf.lcd_density=120
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -32,8 +33,8 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-ro.sf.lcd_density=160
-qemu.sf.lcd_density=160
+ro.sf.lcd_density=120
+qemu.sf.lcd_density=120
 ro.opengles.version = 131072
 
 # Wifi interface
