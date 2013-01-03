@@ -107,8 +107,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/sec_param.ko:root/sec_param.ko \
 # Board-specific init
 PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/ueventd.gt-s5360.rc:root/ueventd.gt-s5360.rc \
-    device/samsung/cooperve/init.gt-s5360.rc:root/init.gt-s5360.rc
+    device/samsung/cooperve/ueventd.gt-s5830i.rc:root/ueventd.gt-s5830i.rc \
+    device/samsung/cooperve/init.gt-s5830i.rc:root/init.gt-s5830i.rc
 
 
 #extra-apps
@@ -118,7 +118,7 @@ PRODUCT_COPY_FILES += \
 
 # Configuration files for audio
 PRODUCT_COPY_FILES += \
-	vendor/samsung/cooperve/proprietary/system/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
+	#vendor/samsung/cooperve/proprietary/system/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
 	vendor/samsung/cooperve/proprietary/system/etc/audio/LVVEFS_Rx_Configuration.txt:system/etc/audio/LVVEFS_Rx_Configuration.txt \
 	vendor/samsung/cooperve/proprietary/system/etc/audio/LVVEFS_Tx_Configuration.txt:system/etc/audio/LVVEFS_Tx_Configuration.txt \
 	vendor/samsung/cooperve/proprietary/system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt \
@@ -330,7 +330,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # other kernel modules not in ramdisk
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/bcm21553/kernel
+    LOCAL_KERNEL := device/samsung/cooperve/kernel
 else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
