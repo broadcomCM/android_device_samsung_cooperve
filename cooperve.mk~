@@ -26,7 +26,7 @@ $(call inherit-product, device/samsung/cooperve/device_cooperve.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := cm_cooperve
+PRODUCT_NAME := cooperve
 PRODUCT_DEVICE := cooperve
 PRODUCT_MODEL := GT-S5830i
 
