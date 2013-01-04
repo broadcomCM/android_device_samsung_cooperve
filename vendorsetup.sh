@@ -21,4 +21,4 @@
 # function: add_lunch_combo generic-eng
 
 add_lunch_combo cooperve-eng
-add_lunch_combo generic_cooperve-userdebug
+add_lunch_combo cooperve-userdebug
