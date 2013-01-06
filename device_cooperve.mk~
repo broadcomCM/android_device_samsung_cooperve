@@ -188,12 +188,12 @@ vendor/samsung/cooperve/proprietary/system/lib/libomx_sharedlibrary.so:system/li
 #usb
 PRODUCT_COPY_FILES += \
 vendor/samsung/cooperve/proprietary/system/etc/vold.fstab:system/etc/vold.fstab \
-vendor/samsung/cooperve/proprietary/system/bin/vold:system/bin/vold \
-vendor/samsung/cooperve/proprietary/system/bin/usb_portd:system/bin/usb_portd \
-vendor/samsung/cooperve/proprietary/system/etc/usb_portd.conf:system/etc/usb_portd.conf \
-vendor/samsung/cooperve/proprietary/system/etc/usb_tether.sh:system/etc/usb_tether.sh \
-vendor/samsung/cooperve/proprietary/system/etc/usbconfig.sh:system/etc/usbconfig.sh \
-vendor/samsung/cooperve/proprietary/system/etc/dbus.conf:system/etc/dbus.conf \
+#vendor/samsung/cooperve/proprietary/system/bin/vold:system/bin/vold \
+#vendor/samsung/cooperve/proprietary/system/bin/usb_portd:system/bin/usb_portd \
+#vendor/samsung/cooperve/proprietary/system/etc/usb_portd.conf:system/etc/usb_portd.conf \
+#vendor/samsung/cooperve/proprietary/system/etc/usb_tether.sh:system/etc/usb_tether.sh \
+#vendor/samsung/cooperve/proprietary/system/etc/usbconfig.sh:system/etc/usbconfig.sh \
+#vendor/samsung/cooperve/proprietary/system/etc/dbus.conf:system/etc/dbus.conf \
 
 #vendor/samsung/cooperve/proprietary/system/etc/usbmode.txt:system/etc/usbmode.txt \
 #phone
@@ -301,7 +301,7 @@ vendor/samsung/cooperve/proprietary/system/lib/libbrcm_ril.so:system/lib/libbrcm
 vendor/samsung/cooperve/proprietary/system/lib/liburilclient.so:system/lib/liburilclient.so \
 vendor/samsung/cooperve/proprietary/system/lib/libbrcm_ril.so:system/lib/libreference-ril.so \
 
-#others
+#outros
 PRODUCT_COPY_FILES += \
 vendor/samsung/cooperve/proprietary/system/bin/BCM4330B1_002.001.003.0485.0506.hcd:system/bin/BCM4330B1_002.001.003.0485.0506.hcd \
 #vendor/samsung/cooperve/proprietary/system/lib/libandroidterm2.so:system/lib/libandroidterm2.so \
