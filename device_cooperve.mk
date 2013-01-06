@@ -118,7 +118,7 @@ PRODUCT_COPY_FILES += \
 
 # Configuration files for audio
 PRODUCT_COPY_FILES += \
-	#vendor/samsung/cooperve/proprietary/system/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
+	vendor/samsung/cooperve/proprietary/system/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
 	vendor/samsung/cooperve/proprietary/system/etc/audio/LVVEFS_Rx_Configuration.txt:system/etc/audio/LVVEFS_Rx_Configuration.txt \
 	vendor/samsung/cooperve/proprietary/system/etc/audio/LVVEFS_Tx_Configuration.txt:system/etc/audio/LVVEFS_Tx_Configuration.txt \
 	vendor/samsung/cooperve/proprietary/system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt \
@@ -152,11 +152,11 @@ vendor/samsung/cooperve/proprietary/system/lib/lib_R2VS_ARM_GA_Library_for_EUROP
 vendor/samsung/cooperve/proprietary/system/lib/libmedia.so:system/lib/libmedia.so \
 vendor/samsung/cooperve/proprietary/system/lib/libaudioflinger.so:system/lib/libaudioflinger.so \
 vendor/samsung/cooperve/proprietary/system/lib/liba2dp.so:system/lib/liba2dp.so \
-#vendor/samsung/cooperve/proprietary/system/bin/mediaserver:system/bin/mediaserver \
-#vendor/samsung/cooperve/proprietary/system/lib/libsisodrm.so:system/lib/libsisodrm.so \
-#vendor/samsung/cooperve/proprietary/system/lib/libomadrm.so:system/lib/libomadrm.so \
-#vendor/samsung/cooperve/proprietary/system/lib/librs_jni.so:system/lib/librs_jni.so \
-#vendor/samsung/cooperve/proprietary/system/lib/libRS.so:system/lib/libRS.so \
+vendor/samsung/cooperve/proprietary/system/bin/mediaserver:system/bin/mediaserver \
+vendor/samsung/cooperve/proprietary/system/lib/libsisodrm.so:system/lib/libsisodrm.so \
+vendor/samsung/cooperve/proprietary/system/lib/libomadrm.so:system/lib/libomadrm.so \
+vendor/samsung/cooperve/proprietary/system/lib/librs_jni.so:system/lib/librs_jni.so \
+vendor/samsung/cooperve/proprietary/system/lib/libRS.so:system/lib/libRS.so \
 #vendor/samsung/cooperve/proprietary/system/lib/liblzo.so:system/lib/liblzo.so \
 
 # apns config file
