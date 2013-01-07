@@ -107,8 +107,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/sec_param.ko:root/sec_param.ko \
 # Board-specific init
 PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/ramdisk/ueventd.gt-s5830i.rc:root/ueventd.gt-s5830i.rc \
-    device/samsung/cooperve/ramdisk/init.gt-s5830i.rc:root/init.gt-s5830i.rc
+    device/samsung/cooperve/ueventd.gt-s5830i.rc:root/ueventd.gt-s5830i.rc \
+    device/samsung/cooperve/init.gt-s5830i.rc:root/init.gt-s5830i.rc
 
 
 #extra-apps
