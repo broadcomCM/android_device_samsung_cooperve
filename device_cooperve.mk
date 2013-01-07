@@ -255,13 +255,13 @@ vendor/samsung/cooperve/proprietary/system/etc/gps.conf:system/etc/gps.conf \
 
 #misc
 PRODUCT_COPY_FILES += \
-vendor/samsung/totoro/proprietary/system/bin/btld:system/bin/btld \
-vendor/samsung/totoro/proprietary/system/bin/wlandutservice:system/bin/wlandutservice \
-vendor/samsung/totoro/proprietary/system/bin/mfgloader:system/bin/mfgloader \
-vendor/samsung/totoro/proprietary/system/bin/runSysCmd:system/bin/runSysCmd \
-vendor/samsung/totoro/proprietary/system/bin/usb_portd:system/bin/usb_portd \
-vendor/samsung/totoro/proprietary/system/bin/npsmobex:system/bin/npsmobex \
-vendor/samsung/totoro/proprietary/system/bin/memsicd:system/bin/memsicd 
+vendor/samsung/cooperve/proprietary/system/bin/btld:system/bin/btld \
+vendor/samsung/cooperve/proprietary/system/bin/wlandutservice:system/bin/wlandutservice \
+vendor/samsung/cooperve/proprietary/system/bin/mfgloader:system/bin/mfgloader \
+vendor/samsung/cooperve/proprietary/system/bin/runSysCmd:system/bin/runSysCmd \
+vendor/samsung/cooperve/proprietary/system/bin/usb_portd:system/bin/usb_portd \
+vendor/samsung/cooperve/proprietary/system/bin/npsmobex:system/bin/npsmobex \
+vendor/samsung/cooperve/proprietary/system/bin/memsicd:system/bin/memsicd 
 
 #Wifi
 PRODUCT_COPY_FILES += \
@@ -308,12 +308,12 @@ device/samsung/cooperve/prebuilt/lib/hw/gralloc.cooperve.so:system/lib/hw/grallo
 
 #Media scanner apps
 PRODUCT_COPY_FILES += \
-device/samsung/totoro/prebuilt/app/meridian.apk:system/app/meridian.apk \
-device/samsung/totoro/prebuilt/app/quick.apk:system/app/quick.apk \
-device/samsung/totoro/prebuilt/lib/libqpicjni99.so:system/lib/libqpicjni99.so \
-device/samsung/totoro/prebuilt/lib/libandless.so:system/lib/libandless.so \
-device/samsung/totoro/prebuilt/lib/libatrack9.so:system/lib/libatrack9.so \
-device/samsung/totoro/prebuilt/lib/libatrack8.so:system/lib/libatrack8.so \
+device/samsung/cooperve/prebuilt/app/meridian.apk:system/app/meridian.apk \
+device/samsung/cooperve/prebuilt/app/quick.apk:system/app/quick.apk \
+device/samsung/cooperve/prebuilt/lib/libqpicjni99.so:system/lib/libqpicjni99.so \
+device/samsung/cooperve/prebuilt/lib/libandless.so:system/lib/libandless.so \
+device/samsung/cooperve/prebuilt/lib/libatrack9.so:system/lib/libatrack9.so \
+device/samsung/cooperve/prebuilt/lib/libatrack8.so:system/lib/libatrack8.so \
 
 #Bootanimation
 PRODUCT_COPY_FILES += \
