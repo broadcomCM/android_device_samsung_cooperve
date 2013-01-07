@@ -321,6 +321,10 @@ PRODUCT_COPY_FILES += \
 device/samsung/cooperve/prebuilt/lib/egl/libGLES_hgl.so:system/lib/egl/libGLES_hgl.so \
 device/samsung/cooperve/prebuilt/lib/hw/gralloc.default.so:system/lib/hw/gralloc.default.so 
 
+#Bootanimation
+PRODUCT_COPY_FILES += \
+vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip \
+
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
 PRODUCT_PROPERTY_OVERRIDES += \
