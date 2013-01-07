@@ -22,7 +22,7 @@
 <resources>
 
     <!-- Use the new fancy screen off animation -->
-    <bool name="config_animateScreenLights">true</bool>
+    <bool name="config_animateScreenLights">false</bool>
     
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -70,6 +70,7 @@
     <string-array translatable="false" name="config_tether_upstream_regexs">
         <item>"pdp\\d"</item>
         <item>"eth\\d"</item>
+        <item>"rmnet\\d"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
