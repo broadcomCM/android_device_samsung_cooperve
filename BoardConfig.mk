@@ -87,7 +87,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_RECOVERY_INITRC := device/samsung/cooperve/recovery.rc
 BOARD_LDPI_RECOVERY := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/cooperve/recovery/recovery_ui.c
-TARGET_RECOVERY_FSTAB := device/samsung/cooperve/recovery.fstab
 
 #Prebuilt kernel
 TARGET_PREBUILT_KERNEL := device/samsung/cooperve/kernel
