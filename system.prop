@@ -39,6 +39,32 @@ ro.opengles.version = 131072
 # Wifi interface
 wifi.interface=eth0
 
+# Network settings + 3G/EDGE Hacks
+ro.ril.hep=1
+ro.ril.hsxpa=1
+ro.ril.enable.dtm=1
+ro.ril.gprsclass=10
+ro.ril.enable.a52=1
+ro.ril.enable.a53=1
+ro.ril.hsdpa.category=28
+ro.ril.hsupa.category=7
+ro.ril.enable.3g.prefix=1
+ro.ril.oem.nosim.ecclist=911,112,999,000,08,118,120,122,110,119,995,113,115,1530,1522 \
+ro.ril.emc.mode=2
+ro.com.android.dataroaming=false
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+# Managing modem answere on switch from 2G to 3G
+ro.ril.ntmodeglobal=true
+
 ro.telephony.ril_class=samsung
 mobiledata.interfaces=pdp0,eth0,gprs,ppp0
 
