@@ -310,10 +310,12 @@ device/samsung/cooperve/prebuilt/lib/hw/gralloc.cooperve.so:system/lib/hw/grallo
 PRODUCT_COPY_FILES += \
 device/samsung/cooperve/prebuilt/app/Gallery3D.apk:system/app/Gallery3D.apk \
 device/samsung/cooperve/prebuilt/app/MediaPlayer.apk:system/app/MediaPlayer.apk \
+device/samsung/cooperve/prebuilt/app/Camera.apk:system/app/Camera.apk \
 device/samsung/cooperve/prebuilt/lib/libqpicjni99.so:system/lib/libqpicjni99.so \
 device/samsung/cooperve/prebuilt/lib/libandless.so:system/lib/libandless.so \
 device/samsung/cooperve/prebuilt/lib/libatrack9.so:system/lib/libatrack9.so \
 device/samsung/cooperve/prebuilt/lib/libatrack8.so:system/lib/libatrack8.so \
+device/samsung/cooperve/prebuilt/lib/libandroid-illusion.so:system/lib/libandroid-illusion.so
 
 #Bootanimation
 PRODUCT_COPY_FILES += \
