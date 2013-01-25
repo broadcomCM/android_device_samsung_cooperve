@@ -97,8 +97,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt \
     vendor/samsung/cooperve/proprietary/system/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt \
     vendor/samsung/cooperve/proprietary/system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt \
-    device/samsung/cooperve/prebuilt/etc/init.d/10soundbooster:system/etc/init.d/10soundbooster \
-    #vendor/samsung/cooperve/proprietary/system/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
+    device/samsung/cooperve/prebuilt/etc/init.d/10soundbooster:system/etc/init.d/10soundbooster
+#    vendor/samsung/cooperve/proprietary/system/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
 
 
     
@@ -125,8 +125,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/libsisodrm.so:system/lib/libsisodrm.so \
     vendor/samsung/cooperve/proprietary/system/lib/libomadrm.so:system/lib/libomadrm.so \
     vendor/samsung/cooperve/proprietary/system/lib/librs_jni.so:system/lib/librs_jni.so \
-    vendor/samsung/cooperve/proprietary/system/lib/libRS.so:system/lib/libRS.so \
-    #vendor/samsung/cooperve/proprietary/system/lib/liblzo.so:system/lib/liblzo.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libRS.so:system/lib/libRS.so
+#    vendor/samsung/cooperve/proprietary/system/lib/liblzo.so:system/lib/liblzo.so
 
 # Apns config file
 PRODUCT_COPY_FILES += \
@@ -143,7 +143,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/libomx_avcdec_sharedlibrary.so:system/lib/libomx_avcdec_sharedlibrary.so \
     vendor/samsung/cooperve/proprietary/system/lib/libomx_m4vdec_sharedlibrary.so:system/lib/libomx_m4vdec_sharedlibrary.so \
     vendor/samsung/cooperve/proprietary/system/lib/libomx_mp3dec_sharedlibrary.so:system/lib/libomx_mp3dec_sharedlibrary.so \
-    vendor/samsung/cooperve/proprietary/system/lib/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so
 #    vendor/samsung/cooperve/proprietary/system/lib/libopencore_author.so:system/lib/libopencore_author.so \
 #    vendor/samsung/cooperve/proprietary/system/lib/libopencore_common.so:system/lib/libopencore_common.so \
 #    vendor/samsung/cooperve/proprietary/system/lib/libopencore_mp4local.so:system/lib/libopencore_mp4local.so \
@@ -162,7 +162,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/etc/usb_portd.conf:system/etc/usb_portd.conf \
     vendor/samsung/cooperve/proprietary/system/etc/usb_tether.sh:system/etc/usb_tether.sh \
     vendor/samsung/cooperve/proprietary/system/etc/usbconfig.sh:system/etc/usbconfig.sh \
-    vendor/samsung/cooperve/proprietary/system/etc/dbus.conf:system/etc/dbus.conf \
+    vendor/samsung/cooperve/proprietary/system/etc/dbus.conf:system/etc/dbus.conf
 #    vendor/samsung/cooperve/proprietary/system/etc/usbmode.txt:system/etc/usbmode.txt \
 
 # Camera
@@ -176,7 +176,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \
     vendor/samsung/cooperve/proprietary/system/lib/libcamera_client.so:system/lib/libcamera_client.so \
     vendor/samsung/cooperve/proprietary/system/lib/libcameraservice.so:system/lib/libcameraservice.so \
-    vendor/samsung/cooperve/proprietary/system/lib/libcaps.so:system/lib/libcaps.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libcaps.so:system/lib/libcaps.so
 
 # Sensores
 PRODUCT_COPY_FILES += \
@@ -189,7 +189,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/hw/sensors.default.so:system/lib/hw/sensors.default.so \
     vendor/samsung/cooperve/proprietary/system/lib/hw/sensors.goldfish.so:system/lib/hw/sensors.goldfish.so \
     vendor/samsung/cooperve/proprietary/system/lib/libaccsensorcal.so:system/lib/libaccsensorcal.so \
-    vendor/samsung/cooperve/proprietary/system/lib/libaccsensorcaltest.so:system/lib/libaccsensorcaltest.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libaccsensorcaltest.so:system/lib/libaccsensorcaltest.so
 #    vendor/samsung/cooperve/proprietary/system/lib/libaccelcal.so:system/lib/libaccelcal.so \
 #    vendor/samsung/cooperve/proprietary/system/lib/libdhwr.so:system/lib/libdhwr.so 
 
@@ -204,7 +204,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     vendor/samsung/cooperve/proprietary/system/usr/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
     vendor/samsung/cooperve/proprietary/system/usr/keylayout/sec_key.kl:system/usr/keylayout/sec_key.kl \
-    vendor/samsung/cooperve/proprietary/system/usr/keylayout/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
+    vendor/samsung/cooperve/proprietary/system/usr/keylayout/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl
 
 # Bluetooth
 #PRODUCT_COPY_FILES += \
@@ -233,7 +233,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/etc/gps/glconfig4751.xml:system/etc/gps/glconfig4751.xml \
     vendor/samsung/cooperve/proprietary/system/bin/glgps:system/bin/glgps \
     vendor/samsung/cooperve/proprietary/system/bin/gps.cer:system/bin/gps.cer \
-    vendor/samsung/cooperve/proprietary/system/etc/gps.conf:system/etc/gps.conf \
+    vendor/samsung/cooperve/proprietary/system/etc/gps.conf:system/etc/gps.conf
 
 # Misc
 PRODUCT_COPY_FILES += \
@@ -267,7 +267,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/bin/rild:system/bin/rild \
     vendor/samsung/cooperve/proprietary/system/lib/libbrcm_ril.so:system/lib/libbrcm_ril.so \
     vendor/samsung/cooperve/proprietary/system/lib/liburilclient.so:system/lib/liburilclient.so \
-    vendor/samsung/cooperve/proprietary/system/lib/libbrcm_ril.so:system/lib/libreference-ril.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libbrcm_ril.so:system/lib/libreference-ril.so
 
 # Others
 PRODUCT_COPY_FILES += \
@@ -301,7 +301,7 @@ PRODUCT_COPY_FILES += \
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip \
+    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
 
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
