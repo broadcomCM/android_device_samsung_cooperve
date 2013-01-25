@@ -225,23 +225,23 @@ vendor/samsung/cooperve/proprietary/system/usr/keylayout/sec_key.kl:system/usr/k
 vendor/samsung/cooperve/proprietary/system/usr/keylayout/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
 
 #bluetooth
-PRODUCT_COPY_FILES += \
-vendor/samsung/cooperve/proprietary/system/lib/libbluedroid.so:system/lib/libbluedroid.so \
-vendor/samsung/cooperve/proprietary/system/lib/libbluetooth.so:system/lib/libbluetooth.so \
-vendor/samsung/cooperve/proprietary/system/lib/libbluetoothd.so:system/lib/libbluetoothd.so \
-vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_calendar.jpg:system/usr/bluetooth/print/icon_calendar.jpg \
-vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_contact.jpg:system/usr/bluetooth/print/icon_contact.jpg \
-vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_email.jpg:system/usr/bluetooth/print/icon_email.jpg \
-vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_man.jpg:system/usr/bluetooth/print/icon_man.jpg \
-vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_mms.jpg:system/usr/bluetooth/print/icon_mms.jpg \
-vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_sms.jpg:system/usr/bluetooth/print/icon_sms.jpg \
-vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/logo.jpg:system/usr/bluetooth/print/logo.jpg \
-vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/title.jpg:system/usr/bluetooth/print/title.jpg \
-vendor/samsung/cooperve/proprietary/system/etc/bluetooth/audio.conf:system/etc/bluetooth/audio.conf \
-vendor/samsung/cooperve/proprietary/system/etc/bluetooth/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
-vendor/samsung/cooperve/proprietary/system/etc/bluetooth/blacklist.conf:system/etc/bluetooth/blacklist.conf \
-vendor/samsung/cooperve/proprietary/system/etc/bluetooth/input.conf:system/etc/bluetooth/input.conf \
-vendor/samsung/cooperve/proprietary/system/etc/bluetooth/main.conf:system/etc/bluetooth/main.conf 
+#PRODUCT_COPY_FILES += \
+#vendor/samsung/cooperve/proprietary/system/lib/libbluedroid.so:system/lib/libbluedroid.so \
+#vendor/samsung/cooperve/proprietary/system/lib/libbluetooth.so:system/lib/libbluetooth.so \
+#vendor/samsung/cooperve/proprietary/system/lib/libbluetoothd.so:system/lib/libbluetoothd.so \
+#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_calendar.jpg:system/usr/bluetooth/print/icon_calendar.jpg \
+#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_contact.jpg:system/usr/bluetooth/print/icon_contact.jpg \
+#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_email.jpg:system/usr/bluetooth/print/icon_email.jpg \
+#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_man.jpg:system/usr/bluetooth/print/icon_man.jpg \
+#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_mms.jpg:system/usr/bluetooth/print/icon_mms.jpg \
+#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_sms.jpg:system/usr/bluetooth/print/icon_sms.jpg \
+#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/logo.jpg:system/usr/bluetooth/print/logo.jpg \
+#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/title.jpg:system/usr/bluetooth/print/title.jpg \
+#vendor/samsung/cooperve/proprietary/system/etc/bluetooth/audio.conf:system/etc/bluetooth/audio.conf \
+#vendor/samsung/cooperve/proprietary/system/etc/bluetooth/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
+#vendor/samsung/cooperve/proprietary/system/etc/bluetooth/blacklist.conf:system/etc/bluetooth/blacklist.conf \
+#vendor/samsung/cooperve/proprietary/system/etc/bluetooth/input.conf:system/etc/bluetooth/input.conf \
+#vendor/samsung/cooperve/proprietary/system/etc/bluetooth/main.conf:system/etc/bluetooth/main.conf 
 
 #gps
 PRODUCT_COPY_FILES += \
@@ -308,12 +308,15 @@ device/samsung/cooperve/prebuilt/lib/hw/gralloc.cooperve.so:system/lib/hw/grallo
 
 #Media scanner apps
 PRODUCT_COPY_FILES += \
-device/samsung/cooperve/prebuilt/app/meridian.apk:system/app/meridian.apk \
-device/samsung/cooperve/prebuilt/app/quick.apk:system/app/quick.apk \
+device/samsung/cooperve/prebuilt/app/Gallery3D.apk:system/app/Gallery3D.apk \
+device/samsung/cooperve/prebuilt/app/MediaPlayer.apk:system/app/MediaPlayer.apk \
+device/samsung/cooperve/prebuilt/app/Camera.apk:system/app/Camera.apk \
 device/samsung/cooperve/prebuilt/lib/libqpicjni99.so:system/lib/libqpicjni99.so \
 device/samsung/cooperve/prebuilt/lib/libandless.so:system/lib/libandless.so \
 device/samsung/cooperve/prebuilt/lib/libatrack9.so:system/lib/libatrack9.so \
 device/samsung/cooperve/prebuilt/lib/libatrack8.so:system/lib/libatrack8.so \
+device/samsung/cooperve/prebuilt/lib/libandroid-illusion.so:system/lib/libandroid-illusion.so \
+device/samsung/cooperve/prebuilt/app/FileManager.apk:system/app/FileManager.apk 
 
 #Bootanimation
 PRODUCT_COPY_FILES += \
