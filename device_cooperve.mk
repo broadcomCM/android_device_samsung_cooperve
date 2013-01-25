@@ -315,7 +315,8 @@ device/samsung/cooperve/prebuilt/lib/libqpicjni99.so:system/lib/libqpicjni99.so 
 device/samsung/cooperve/prebuilt/lib/libandless.so:system/lib/libandless.so \
 device/samsung/cooperve/prebuilt/lib/libatrack9.so:system/lib/libatrack9.so \
 device/samsung/cooperve/prebuilt/lib/libatrack8.so:system/lib/libatrack8.so \
-device/samsung/cooperve/prebuilt/lib/libandroid-illusion.so:system/lib/libandroid-illusion.so
+device/samsung/cooperve/prebuilt/lib/libandroid-illusion.so:system/lib/libandroid-illusion.so \
+device/samsung/cooperve/prebuilt/app/FileManager.apk:system/app/FileManager.apk 
 
 #Bootanimation
 PRODUCT_COPY_FILES += \
