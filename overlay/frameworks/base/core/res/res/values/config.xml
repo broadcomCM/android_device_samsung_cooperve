@@ -30,7 +30,7 @@
     <bool name="config_batterySdCardAccessibility">true</bool>
 
     <!-- Display low battery warning when battery level dips to this value -->
-    <integer name="config_lowBatteryWarningLevel">15</integer>
+    <integer name="config_lowBatteryWarningLevel">10</integer>
 
     <!-- crespo doesn't handle this blur effect very quickly.  -->
     <bool name="config_sf_slowBlur">true</bool>
