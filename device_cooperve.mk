@@ -48,8 +48,6 @@ PRODUCT_PACKAGES += \
 # Extra overlay for LDPI
     PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mdpi
 
-  
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -59,7 +57,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
-
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=eth0 \
@@ -99,9 +96,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt \
     device/samsung/cooperve/prebuilt/etc/init.d/10soundbooster:system/etc/init.d/10soundbooster
 #    vendor/samsung/cooperve/proprietary/system/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
-
-
-    
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -192,7 +186,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/libaccsensorcaltest.so:system/lib/libaccsensorcaltest.so
 #    vendor/samsung/cooperve/proprietary/system/lib/libaccelcal.so:system/lib/libaccelcal.so \
 #    vendor/samsung/cooperve/proprietary/system/lib/libdhwr.so:system/lib/libdhwr.so 
-
 
 # Keychars
 PRODUCT_COPY_FILES += \

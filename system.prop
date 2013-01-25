@@ -5,7 +5,7 @@
 
 #deox
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
-dalvik.vm.startheapsize=32m
+dalvik.vm.startheapsize=24m
 #dalvik.vm.dexopt-data-only=1
 dalvik.vm.dexopt-flags=m=y
 dalvik.vm.heapsize=64m
