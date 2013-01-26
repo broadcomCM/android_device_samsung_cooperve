@@ -124,32 +124,27 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/etc/vold.fstab:system/etc/vold.fstab \
     vendor/samsung/cooperve/proprietary/system/bin/vold:system/bin/vold \
-#    vendor/samsung/cooperve/proprietary/system/bin/usb_portd:system/bin/usb_portd \
-#    vendor/samsung/cooperve/proprietary/system/etc/usb_portd.conf:system/etc/usb_portd.conf \
-#    vendor/samsung/cooperve/proprietary/system/etc/usb_tether.sh:system/etc/usb_tether.sh \
-#    vendor/samsung/cooperve/proprietary/system/etc/usbconfig.sh:system/etc/usbconfig.sh \
-#    vendor/samsung/cooperve/proprietary/system/etc/dbus.conf:system/etc/dbus.conf \
-#    vendor/samsung/cooperve/proprietary/system/etc/usbmode.txt:system/etc/usbmode.txt
-
-#phone
-#PRODUCT_COPY_FILES += \
+    vendor/samsung/cooperve/proprietary/system/bin/usb_portd:system/bin/usb_portd \
+    vendor/samsung/cooperve/proprietary/system/etc/usb_portd.conf:system/etc/usb_portd.conf \
+    vendor/samsung/cooperve/proprietary/system/etc/usb_tether.sh:system/etc/usb_tether.sh \
+    vendor/samsung/cooperve/proprietary/system/etc/usbconfig.sh:system/etc/usbconfig.sh \
+    vendor/samsung/cooperve/proprietary/system/etc/dbus.conf:system/etc/dbus.conf \
+    vendor/samsung/cooperve/proprietary/system/etc/usbmode.txt:system/etc/usbmode.txt
 
 #camera
 PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/libcamera.so:system/lib/libcamera.so \
     vendor/samsung/cooperve/proprietary/system/lib/libbrcmjpeg.so:system/lib/libbrcmjpeg.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libarccamera.so:system/lib/libarccamera.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libCaMotion.so:system/lib/libCaMotion.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libPanoraMax1.so:system/lib/libPanoraMax1.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libseccamera.so:system/lib/libseccamera.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libcamera_client.so:system/lib/libcamera_client.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libcameraservice.so:system/lib/libcameraservice.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libcaps.so:system/lib/libcaps.so
+    vendor/samsung/cooperve/proprietary/system/lib/libarccamera.so:system/lib/libarccamera.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libCaMotion.so:system/lib/libCaMotion.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libPanoraMax1.so:system/lib/libPanoraMax1.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libseccamera.so:system/lib/libseccamera.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libcamera_client.so:system/lib/libcamera_client.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    vendor/samsung/cooperve/proprietary/system/lib/libcaps.so:system/lib/libcaps.so
 
 #sensores
-
-
 PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/hw/lights.bcm21553.so:system/lib/hw/lights.bcm21553.so \
 #    vendor/samsung/cooperve/proprietary/system/lib/hw/acoustics.default.so:system/lib/hw/acoustics.default.so \
@@ -220,14 +215,14 @@ PRODUCT_COPY_FILES += \
 #Wifi
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/bin/get_macaddrs:/system/bin/get_macaddrs \
-#    vendor/samsung/cooperve/proprietary/system/etc/wifi/bcm4330_aps.bin:system/etc/wifi/bcm4330_aps.bin \
-#    vendor/samsung/cooperve/proprietary/system/etc/wifi/bcm4330_sta.bin:system/etc/wifi/bcm4330_sta.bin \
-#    vendor/samsung/cooperve/proprietary/system/etc/wifi/RC_248_WPA.bin:system/etc/wifi/RC_248_WPA.bin \
-#    vendor/samsung/cooperve/proprietary/system/etc/wifi/bcm4330_mfg.bin:system/etc/wifi/bcm4330_mfg.bin \
-#    vendor/samsung/cooperve/proprietary/system/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
-#    vendor/samsung/cooperve/proprietary/system/etc/wifi/nvram.txt:system/etc/wifi/nvram.txt \
-#    vendor/samsung/cooperve/proprietary/system/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \
-#    vendor/samsung/cooperve/proprietary/system/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    vendor/samsung/cooperve/proprietary/system/etc/wifi/bcm4330_aps.bin:system/etc/wifi/bcm4330_aps.bin \
+    vendor/samsung/cooperve/proprietary/system/etc/wifi/bcm4330_sta.bin:system/etc/wifi/bcm4330_sta.bin \
+    vendor/samsung/cooperve/proprietary/system/etc/wifi/RC_248_WPA.bin:system/etc/wifi/RC_248_WPA.bin \
+    vendor/samsung/cooperve/proprietary/system/etc/wifi/bcm4330_mfg.bin:system/etc/wifi/bcm4330_mfg.bin \
+    vendor/samsung/cooperve/proprietary/system/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
+    vendor/samsung/cooperve/proprietary/system/etc/wifi/nvram.txt:system/etc/wifi/nvram.txt \
+    vendor/samsung/cooperve/proprietary/system/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \
+    vendor/samsung/cooperve/proprietary/system/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 #rild
 PRODUCT_COPY_FILES += \
