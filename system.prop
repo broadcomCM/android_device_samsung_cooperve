@@ -1,0 +1,44 @@
+#
+# system.prop for GT-S5630 (totoro)
+#
+
+## Graphics
+ro.opengles.version=131072
+ro.sf.lcd_density=160
+media.stagefright.enable-player=true
+windowsmgr.max_events_per_sec=150
+video.accelerate.hw=1
+
+
+## RIL
+rild.libpath=/system/lib/libbrcm_ril.so
+rild.libargs=-d /dev/smd0
+ro.telephony.default_network=0
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+mobiledata.interfaces=pdp0,gprs,ppp0
+DEVICE_PROVISIONED=1
+ro.telephony.call_ring.delay=0
+ro.ril.disable.power.collapse=0
+DEVICE_PROVISIONED=1
+
+## Wi-Fi interface
+wifi.interface=eth0
+wifi.supplicant_scan_interval=30
+
+## System and Misc.
+qemu.sf.lcd_density=160
+ro.tether.denied=false
+sys.checkfs.fat=false
+ro.vold.umsdirtyratio=20
+ro.com.google.locationfeatures=1
+ro.setupwizard.enable_bypass=1
+dalvik.vm.lockprof.threshold=500
+dalvik.vm.dexopt-flags=m=y
+dalvik.vm.heapstartsize=5m	
+dalvik.vm.heapgrowthlimit=24m	
+dalvik.vm.heapsize=32m
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.dexopt-data-only=1
+persist.sys.use_dithering=2
+persist.sys.usb.config=mass_storage

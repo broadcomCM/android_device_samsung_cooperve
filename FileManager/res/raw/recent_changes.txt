@@ -1,0 +1,34 @@
+---------------------------------------------------------
+release: 1.1.6
+date: 2011-06-02
+- fix bug that prevented sending attachments through menu "Send" (patch by Alex)
+
+---------------------------------------------------------
+release: 1.1.5
+date: 2011-05-28
+- new menu item for multiselect: copy, move or delete multiple files at once (patch by John Doe).
+- case insensitive sort order (issue 334, patch by Vishrut Patel).
+- handle projections in the provider (issue 324, patch by Dominik Pretzsch).
+- drop "mimetype" from provider path.
+- delete files and folders in background (issue 294, patch by Damienix).
+
+---------------------------------------------------------
+release: 1.1.4
+date: 2011-02-05
+- new application icon for Android 2.0 or higher.
+- exclude/include directories from media scan (activate this feature in advanced settings).
+- allow app installation on external storage (requires Android 2.2 or higher)
+- fix browser file upload (issue 288)
+- support Android 2.3.
+- translations into various languages.
+- bug fixes (issue 308, 318).
+
+---------------------------------------------------------
+For the complete list of changes and a list of frequently asked questions, please visit:
+http://www.openintents.org
+
+You can help to improve the translation into your language at Launchpad:
+https://translations.launchpad.net/openintents/trunk
+
+The source code of this free and open source application is available at:
+http://code.google.com/p/openintents
