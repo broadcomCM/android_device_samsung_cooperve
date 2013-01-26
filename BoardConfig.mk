@@ -35,17 +35,12 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_PROVIDES_INIT := true
 TARGET_PROVIDES_INIT_TARGET_RC := true
 
-
-USE_CAMERA_STUB := true
-
-#ics stuff
+#ICS Touchscreen
 BOARD_USE_LEGACY_TOUCHSCREEN := true
-
 
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := true
-
 
 # RIL
 BOARD_USES_LEGACY_RIL := true
@@ -63,10 +58,6 @@ BOARD_EGL_CFG := device/samsung/cooperve/prebuilt/lib/egl/egl.cfg
 BOARD_NO_RGBX_8888 := true
 ENABLE_WEBGL := true
 
-
-BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
-
-
 # Device related defines
 BOARD_NAND_PAGE_SIZE := 4096 -s 128
 BOARD_KERNEL_BASE := 0x81600000
@@ -75,7 +66,6 @@ BOARD_PAGE_SIZE := 0x00001000
 BOARD_KERNEL_CMDLINE := 
 
 # Recovery
-
 TARGET_PREBUILT_KERNEL := device/samsung/cooperve/kernel
 BOARD_BML_RECOVERY := /dev/block/bml8
 TARGET_BOOTLOADER_BOARD_NAME := cooperve
@@ -89,7 +79,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 206831616
 BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_RECOVERY_INITRC := device/samsung/cooperve/recovery.rc
 #TARGET_KERNEL_SOURCE := kernel/samsung/gy/common
-#TARGET_KERNEL_CONFIG := bcm21553_totoro_05_cm9_defconfig
+#TARGET_KERNEL_CONFIG := bcm21553_cooperve_defconfig
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 
 # Browser / Stagefright
@@ -103,12 +93,12 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/lm-2/gadget/lun0/file"
 
 # Wifi related defines
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/dhd.ko"
-WIFI_DRIVER_FW_PATH_STA          := "/system/etc/firmware/fw_bcm4330_b2.bin"
-WIFI_DRIVER_FW_PATH_AP           := "/system/etc/firmware/fw_bcm4330_apsta_b2.bin"
-WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/firmware/fw_bcm4330_p2p_b2.bin"
-WIFI_DRIVER_MODULE_NAME          := "dhd.ko"
-WIFI_DRIVER_MODULE_ARG           := "firmware_path=/system/etc/firmware/fw_bcm4330_b2.bin nvram_path=/proc/calibration iface_name=eth0"
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
+WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcm4330_b2.bin"
+WIFI_DRIVER_FW_PATH_AP := "/system/etc/firmware/fw_bcm4330_apsta_b2.bin"
+WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/fw_bcm4330_p2p_b2.bin"
+WIFI_DRIVER_MODULE_NAME := "dhd"
+WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/firmware/fw_bcm4330_b2.bin nvram_path=/proc/calibration iface_name=eth0"
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
