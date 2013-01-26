@@ -25,6 +25,7 @@ DEVICE_PACKAGE_OVERLAYS := device/samsung/cooperve/overlay
 
 # Other
 PRODUCT_PACKAGES += \
+    gralloc.cooperve \
     FileManager \
     setup_fs \
     SoundRecoder \
