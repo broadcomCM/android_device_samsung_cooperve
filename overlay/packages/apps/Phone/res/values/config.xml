@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
+<resources>
     <!-- Determine whether calls to mute the microphone in PhoneUtils
 are routed through the android.media.AudioManager class (true) or through
 the com.android.internal.telephony.Phone interface (false). -->
