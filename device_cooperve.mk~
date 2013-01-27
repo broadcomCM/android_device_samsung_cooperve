@@ -129,7 +129,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/etc/usb_tether.sh:system/etc/usb_tether.sh \
     vendor/samsung/cooperve/proprietary/system/etc/usbconfig.sh:system/etc/usbconfig.sh \
     vendor/samsung/cooperve/proprietary/system/etc/dbus.conf:system/etc/dbus.conf \
-#    vendor/samsung/cooperve/proprietary/system/etc/usbmode.txt:system/etc/usbmode.txt
+    vendor/samsung/cooperve/proprietary/system/etc/usbmode.txt:system/etc/usbmode.txt
 
 #camera
 PRODUCT_COPY_FILES += \
