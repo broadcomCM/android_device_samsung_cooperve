@@ -119,7 +119,7 @@ BT_ALT_STACK := true
 BRCM_BT_USE_BTL_IF := true
 BRCM_BTL_INCLUDE_A2DP := true
 
-#Open SOource Gralloc
+#Open Source Gralloc
 COMMON_GLOBAL_CFLAGS += -DBROADCOM_HW
 
 #FM
