@@ -283,14 +283,34 @@ PRODUCT_COPY_FILES += \
 # Media scanner apps
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/app/Gallery3D.apk:system/app/Gallery3D.apk \
-    device/samsung/cooperve/prebuilt/app/MediaPlayer.apk:system/app/MediaPlayer.apk \
+    device/samsung/cooperve/prebuilt/app/Music_2.apk:system/app/Music_2.apk \
+    device/samsung/cooperve/prebuilt/app/VideoPlayer.apk:system/app/VideoPlayer.apk \
     device/samsung/cooperve/prebuilt/app/Camera.apk:system/app/Camera.apk \
-    device/samsung/cooperve/prebuilt/lib/libqpicjni99.so:system/lib/libqpicjni99.so \
+    device/samsung/cooperve/prebuilt/app/FileManager.apk:system/app/FileManager.apk \
+#    device/samsung/cooperve/prebuilt/app/MediaPlayer.apk:system/app/MediaPlayer.apk \
+
+#Media Scanner libs
+PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/libandless.so:system/lib/libandless.so \
-    device/samsung/cooperve/prebuilt/lib/libatrack9.so:system/lib/libatrack9.so \
+    device/samsung/cooperve/prebuilt/lib/libandroid-illusion.so:system/lib/libandroid-illusion.so  \
     device/samsung/cooperve/prebuilt/lib/libatrack8.so:system/lib/libatrack8.so \
-    device/samsung/cooperve/prebuilt/lib/libandroid-illusion.so:system/lib/libandroid-illusion.so \
-    device/samsung/cooperve/prebuilt/app/FileManager.apk:system/app/FileManager.apk 
+    device/samsung/cooperve/prebuilt/lib/libatrack9.so:system/lib/libatrack9.so \
+    device/samsung/cooperve/prebuilt/lib/libavcodec.so:system/lib/libavcodec.so \
+    device/samsung/cooperve/prebuilt/lib/libavformat.so:system/lib/libavformat.so \
+    device/samsung/cooperve/prebuilt/lib/libavutil.so:system/lib/libavutil.so \
+    device/samsung/cooperve/prebuilt/lib/libft2.so:system/lib/libft2.so \
+    device/samsung/cooperve/prebuilt/lib/libmxass.so:system/lib/libmxass.so \
+    device/samsung/cooperve/prebuilt/lib/libmxsysdec.8.so:system/lib/libmxsysdec.8.so \
+    device/samsung/cooperve/prebuilt/lib/libmxsysdec.9.so:system/lib/libmxsysdec.9.so \
+    device/samsung/cooperve/prebuilt/lib/libmxsysdec.11.so:system/lib/libmxsysdec.11.so \
+    device/samsung/cooperve/prebuilt/lib/libmxsysdec.14.so:system/lib/libmxsysdec.14.so \
+    device/samsung/cooperve/prebuilt/lib/libmxutil.so:system/lib/libmxutil.so \
+    device/samsung/cooperve/prebuilt/lib/libmxvp.so:system/lib/libmxvp.so \
+    device/samsung/cooperve/prebuilt/lib/libplaceholder.so:system/lib/libplaceholder.so \
+    device/samsung/cooperve/prebuilt/lib/libqpicjni99.so:system/lib/libqpicjni99.so \
+    device/samsung/cooperve/prebuilt/lib/libswresample.so:system/lib/libswresample.so \
+    device/samsung/cooperve/prebuilt/lib/libswscale.so:system/lib/libswscale.so
+
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
