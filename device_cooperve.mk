@@ -275,10 +275,18 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/modules/h6270enc.ko:system/lib/modules/h6270enc.ko \
     vendor/samsung/cooperve/proprietary/system/lib/modules/hx170dec.ko:system/lib/modules/hx170dec.ko 
 
-# HW Ddrivers
+# HGL
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/egl/libGLES_hgl.so:system/lib/egl/libGLES_hgl.so \
+
+#Gralloc
+ifdef (BROADCOM_HW)
+PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/hw/gralloc.cooperve.so:system/lib/hw/gralloc.default.so 
+else
+PRODUCT_PACKAGES += \
+    gralloc.cooperve
+endif
 
 # Media scanner apps
 PRODUCT_COPY_FILES += \
