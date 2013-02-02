@@ -319,7 +319,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/libswresample.so:system/lib/libswresample.so \
     device/samsung/cooperve/prebuilt/lib/libswscale.so:system/lib/libswscale.so
 
-
 # Bootanimation
 PRODUCT_COPY_FILES += \
     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
@@ -350,18 +349,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/etc/permissions/features.xml:system/etc/permissions/features.xml \
     device/samsung/cooperve/prebuilt/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     device/samsung/cooperve/prebuilt/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
-
-
-## Other google apps parts
-PRODUCT_COPY_FILES += \
-    device/samsung/cooper/prebuilt/addon.d/70-gapps.sh:system/addon.d/70-gapps.sh \
-    device/samsung/cooper/prebuilt/etc/g.prop:system/etc/g.prop \
-    device/samsung/cooper/prebuilt/etc/permissions/features.xml:system/etc/permisions/features.xml \
-    device/samsung/cooper/prebuilt/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
-    device/samsung/cooper/prebuilt/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
-    device/samsung/cooper/prebuilt/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
-    device/samsung/cooper/prebuilt/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
-    device/samsung/cooper/prebuilt/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
 
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
