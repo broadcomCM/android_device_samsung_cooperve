@@ -324,6 +324,45 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
 
+#GApps
+PRODUCT_COPY_FILES += \
+    device/samsung/cooperve/prebuilt/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
+    device/samsung/cooperve/prebuilt/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
+    device/samsung/cooperve/prebuilt/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
+    device/samsung/cooperve/prebuilt/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
+    device/samsung/cooperve/prebuilt/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
+    device/samsung/cooperve/prebuilt/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
+    device/samsung/cooperve/prebuilt/app/MediaUploader.apk:system/app/MediaUploader.apk \
+    device/samsung/cooperve/prebuilt/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
+    device/samsung/cooperve/prebuilt/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
+    device/samsung/cooperve/prebuilt/app/SetupWizard.apk:system/app/SetupWizard.apk \
+    device/samsung/cooperve/prebuilt/app/Talk.apk:system/app/Talk.apk \
+    device/samsung/cooperve/prebuilt/app/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
+    device/samsung/cooperve/prebuilt/app/FOTAKill.apk:system/app/FOTAKill.apk \
+    device/samsung/cooperve/prebuilt/app/GenieWidget.apk:system/app/GenieWidget.apk \
+    device/samsung/cooperve/prebuilt/app/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
+    device/samsung/cooperve/prebuilt/app/LatinImeTutorial.apk:system/app/LatinImeTutorial.apk \
+    device/samsung/cooperve/prebuilt/app/MarketUpdater.apk:system/app/MarketUpdater.apk \
+    device/samsung/cooperve/prebuilt/app/Vending.apk:system/app/Vending.apk \
+
+PRODUCT_COPY_FILES += \
+    device/samsung/cooperve/prebuilt/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+    device/samsung/cooperve/prebuilt/etc/permissions/features.xml:system/etc/permissions/features.xml \
+    device/samsung/cooperve/prebuilt/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+    device/samsung/cooperve/prebuilt/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
+
+
+## Other google apps parts
+PRODUCT_COPY_FILES += \
+    device/samsung/cooper/prebuilt/addon.d/70-gapps.sh:system/addon.d/70-gapps.sh \
+    device/samsung/cooper/prebuilt/etc/g.prop:system/etc/g.prop \
+    device/samsung/cooper/prebuilt/etc/permissions/features.xml:system/etc/permisions/features.xml \
+    device/samsung/cooper/prebuilt/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+    device/samsung/cooper/prebuilt/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
+    device/samsung/cooper/prebuilt/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
+    device/samsung/cooper/prebuilt/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
+    device/samsung/cooper/prebuilt/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
+
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
 PRODUCT_PROPERTY_OVERRIDES += \
