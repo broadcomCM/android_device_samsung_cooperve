@@ -13,6 +13,7 @@
 # limitations under the License.
 
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),cooperve)
+ifndef (BROADCOM_HW)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -34,4 +35,5 @@ LOCAL_MODULE := gralloc.$(TARGET_BOOTLOADER_BOARD_NAME)
 LOCAL_CFLAGS:= -DLOG_TAG=\"$(TARGET_BOOTLOADER_BOARD_NAME).gralloc\"
 
 include $(BUILD_SHARED_LIBRARY)
+endif
 endif # TARGET_BOOTLOADER_BOARD_NAME
