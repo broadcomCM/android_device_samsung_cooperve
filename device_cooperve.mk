@@ -70,12 +70,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Kernel modules
 PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/prebuilt/fsr.ko:root/fsr.ko \
-    device/samsung/cooperve/prebuilt/fsr_stl.ko:root/fsr_stl.ko \
-    device/samsung/cooperve/prebuilt/rfs_fat.ko:root/rfs_fat.ko \
-    device/samsung/cooperve/prebuilt/rfs_glue.ko:root/rfs_glue.ko \
-    device/samsung/cooperve/prebuilt/j4fs.ko:root/j4fs.ko \
-    device/samsung/cooperve/prebuilt/sec_param.ko:root/sec_param.ko
+    device/samsung/cooperve/prebuilt/root/fsr.ko:root/fsr.ko \
+    device/samsung/cooperve/prebuilt/root/fsr_stl.ko:root/fsr_stl.ko \
+    device/samsung/cooperve/prebuilt/root/rfs_fat.ko:root/rfs_fat.ko \
+    device/samsung/cooperve/prebuilt/root/rfs_glue.ko:root/rfs_glue.ko \
+    device/samsung/cooperve/prebuilt/root/j4fs.ko:root/j4fs.ko \
+    device/samsung/cooperve/prebuilt/root/sec_param.ko:root/sec_param.ko
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
@@ -280,7 +280,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/egl/libGLES_hgl.so:system/lib/egl/libGLES_hgl.so \
 
 #Gralloc
-ifdef (BROADCOM_HW)
+ifeq ($(BROADCOM_HW),true)
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/hw/gralloc.cooperve.so:system/lib/hw/gralloc.default.so 
 else
