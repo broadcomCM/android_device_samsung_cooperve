@@ -350,14 +350,13 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     device/samsung/cooperve/prebuilt/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
 
-# enable Google-specific location features,
-# like NetworkLocationProvider and LocationCollector
+# Enable Google-specific location features, like NetworkLocationProvider and LocationCollector
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.com.google.locationfeatures=1 \
         ro.com.google.networklocation=1
 
 
-# other kernel modules not in ramdisk
+# Other kernel modules not in ramdisk
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := device/samsung/cooperve/kernel
 else
