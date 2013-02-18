@@ -34,33 +34,32 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_BOOTLOADER_BOARD_NAME := cooperve
 TARGET_OTA_ASSERT_DEVICE := cooperve,GT-S5830i
 
-#Audio
+# Audio
 TARGET_PROVIDES_LIBAUDIO := true
 BOARD_USES_ALSA_AUDIO := true
 BUILD_WITH_ALSA_UTILS := true
 TARGET_PROVIDES_MEDIASERVER := true
 
-#camera
+# Camera
 USE_CAMERA_STUB := true
 #BOARD_V4L2_DEVICE := /dev/video2
 #BOARD_CAMERA_DEVICE := /dev/video0
 BOARD_USE_JPEG := true
 
-#you distro is 64 bits ?
+# Using 64 bits OS
 HOST_JDK_IS_64BIT_VERSION := true
 
-#3D
+# 3D
 BOARD_EGL_CFG := device/samsung/cooperve/egl.cfg
 TARGET_PROVIDES_GRALLOC := true
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 TARGET_ELECTRONBEAM_FRAMES := 6
 
-#Open Source Gralloc
+# Open Source Gralloc
 BROADCOM_HW := true
 
-
+# Mobile Data
 BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
-
 
 # Device related defines
 BOARD_NAND_PAGE_SIZE := 4096 -s 128
@@ -86,12 +85,11 @@ TARGET_PREBUILT_KERNEL := device/samsung/cooperve/kernel
 #Enable if you build a kernel, then disable the prebuilt kernel
 #TARGET_KERNEL_CONFIG := cyanogenmod_cooperve_defconfig
 
-
 # JIT / Optimizations
 JS_ENGINE := v8
 
-#usb
-#cooperve no use this directory ,i think need for test !
+# USB
+# cooperve don't use this directory (need testing)
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/lm-2/gadget/lun0/file"
 BOARD_UMS_LUNFILE := "/sys/devices/lm-2/gadget/lun0/file"
@@ -103,17 +101,13 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_STA_PATH := "/system/etc/wifi/bcm4330_sta.bin"
 WIFI_DRIVER_FW_AP_PATH := "/system/etc/wifi/bcm4330_aps.bin"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4330_sta.bin nvram_path=/system/etc/wifi/nvram.txt"
-# hey it will fix wifi , terminal>lsmod=bcm4330     ( no dhd )
 WIFI_DRIVER_MODULE_NAME := "bcm4330"   
-
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
-
 #FM
 #BOARD_HAVE_FM_RADIO := true
 #BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 #BOARD_FM_DEVICE := bcm4329
-

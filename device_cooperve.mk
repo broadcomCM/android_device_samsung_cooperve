@@ -247,7 +247,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/liburilclient.so:system/lib/liburilclient.so \
     vendor/samsung/cooperve/proprietary/system/lib/libbrcm_ril.so:system/lib/libreference-ril.so
 
-#Drivers
+# Drivers
 PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/modules/bcm_headsetsw.ko:system/lib/modules/bcm_headsetsw.ko \
     vendor/samsung/cooperve/proprietary/system/lib/modules/brcm_switch.ko:system/lib/modules/brcm_switch.ko \
