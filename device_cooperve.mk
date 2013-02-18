@@ -45,7 +45,7 @@ PRODUCT_PACKAGES += \
 # Add LDPI assets, in addition to MDPI
     PRODUCT_LOCALES += ldpi mdpi
 
-# Extra overlay for LDPI
+# Extra overlay for MDPI
     PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mdpi
 
 # These are the hardware-specific features
@@ -200,23 +200,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/usr/keylayout/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl
 
 # Bluetooth
-#PRODUCT_COPY_FILES += \
-#    vendor/samsung/cooperve/proprietary/system/lib/libbluedroid.so:system/lib/libbluedroid.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libbluetooth.so:system/lib/libbluetooth.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libbluetoothd.so:system/lib/libbluetoothd.so \
-#    vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_calendar.jpg:system/usr/bluetooth/print/icon_calendar.jpg \
-#    vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_contact.jpg:system/usr/bluetooth/print/icon_contact.jpg \
-#    vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_email.jpg:system/usr/bluetooth/print/icon_email.jpg \
-#    vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_man.jpg:system/usr/bluetooth/print/icon_man.jpg \
-#    vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_mms.jpg:system/usr/bluetooth/print/icon_mms.jpg \
-#vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/icon_sms.jpg:system/usr/bluetooth/print/icon_sms.jpg \
-#    vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/logo.jpg:system/usr/bluetooth/print/logo.jpg \
-#    vendor/samsung/cooperve/proprietary/system/usr/bluetooth/print/title.jpg:system/usr/bluetooth/print/title.jpg \
-#    vendor/samsung/cooperve/proprietary/system/etc/bluetooth/audio.conf:system/etc/bluetooth/audio.conf \
-#    vendor/samsung/cooperve/proprietary/system/etc/bluetooth/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
-#    vendor/samsung/cooperve/proprietary/system/etc/bluetooth/blacklist.conf:system/etc/bluetooth/blacklist.conf \
-#    vendor/samsung/cooperve/proprietary/system/etc/bluetooth/input.conf:system/etc/bluetooth/input.conf \
-#    vendor/samsung/cooperve/proprietary/system/etc/bluetooth/main.conf:system/etc/bluetooth/main.conf 
+PRODUCT_COPY_FILES += \
+    vendor/samsung/cooperve/proprietary/system/etc/bluetooth/audio.conf:system/etc/bluetooth/audio.conf 
+
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -231,7 +217,6 @@ PRODUCT_COPY_FILES += \
 # Misc
 PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/bin/btld:system/bin/btld \
-    vendor/samsung/cooperve/proprietary/system/bin/wlandutservice:system/bin/wlandutservice \
     vendor/samsung/cooperve/proprietary/system/bin/mfgloader:system/bin/mfgloader \
     vendor/samsung/cooperve/proprietary/system/bin/runSysCmd:system/bin/runSysCmd \
     vendor/samsung/cooperve/proprietary/system/bin/usb_portd:system/bin/usb_portd \
@@ -254,18 +239,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \
     vendor/samsung/cooperve/proprietary/system/bin/BCM4330B1_002.001.003.0485.0506.hcd:system/bin/BCM4330B1_002.001.003.0485.0506.hcd 
 
-# Rild
+# Ril
 PRODUCT_COPY_FILES += \
     vendor/samsung/cooperve/proprietary/system/lib/libril.so:system/lib/libril.so \
     vendor/samsung/cooperve/proprietary/system/bin/rild:system/bin/rild \
     vendor/samsung/cooperve/proprietary/system/lib/libbrcm_ril.so:system/lib/libbrcm_ril.so \
     vendor/samsung/cooperve/proprietary/system/lib/liburilclient.so:system/lib/liburilclient.so \
     vendor/samsung/cooperve/proprietary/system/lib/libbrcm_ril.so:system/lib/libreference-ril.so
-
-# Others
-PRODUCT_COPY_FILES += \
-#    vendor/samsung/cooperve/proprietary/system/lib/libandroidterm2.so:system/lib/libandroidterm2.so \
-#    vendor/samsung/cooperve/proprietary/system/lib/libterm.so:system/lib/libterm.so \
 
 #Drivers
 PRODUCT_COPY_FILES += \
@@ -319,36 +299,12 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/libswresample.so:system/lib/libswresample.so \
     device/samsung/cooperve/prebuilt/lib/libswscale.so:system/lib/libswscale.so
 
+# Use the non-open-source parts, if they're present
+-include vendor/samsung/coperve/BoardConfigVendor.mk
+
 # Bootanimation
 PRODUCT_COPY_FILES += \
     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
-
-#GApps
-PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/prebuilt/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
-    device/samsung/cooperve/prebuilt/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
-    device/samsung/cooperve/prebuilt/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
-    device/samsung/cooperve/prebuilt/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
-    device/samsung/cooperve/prebuilt/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
-    device/samsung/cooperve/prebuilt/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
-    device/samsung/cooperve/prebuilt/app/MediaUploader.apk:system/app/MediaUploader.apk \
-    device/samsung/cooperve/prebuilt/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
-    device/samsung/cooperve/prebuilt/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
-    device/samsung/cooperve/prebuilt/app/SetupWizard.apk:system/app/SetupWizard.apk \
-    device/samsung/cooperve/prebuilt/app/Talk.apk:system/app/Talk.apk \
-    device/samsung/cooperve/prebuilt/app/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
-    device/samsung/cooperve/prebuilt/app/FOTAKill.apk:system/app/FOTAKill.apk \
-    device/samsung/cooperve/prebuilt/app/GenieWidget.apk:system/app/GenieWidget.apk \
-    device/samsung/cooperve/prebuilt/app/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
-    device/samsung/cooperve/prebuilt/app/LatinImeTutorial.apk:system/app/LatinImeTutorial.apk \
-    device/samsung/cooperve/prebuilt/app/MarketUpdater.apk:system/app/MarketUpdater.apk \
-    device/samsung/cooperve/prebuilt/app/Vending.apk:system/app/Vending.apk \
-
-PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/prebuilt/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
-    device/samsung/cooperve/prebuilt/etc/permissions/features.xml:system/etc/permissions/features.xml \
-    device/samsung/cooperve/prebuilt/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
-    device/samsung/cooperve/prebuilt/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
 
 # Enable Google-specific location features, like NetworkLocationProvider and LocationCollector
 PRODUCT_PROPERTY_OVERRIDES += \
