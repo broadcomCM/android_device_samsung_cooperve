@@ -299,6 +299,9 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/libswresample.so:system/lib/libswresample.so \
     device/samsung/cooperve/prebuilt/lib/libswscale.so:system/lib/libswscale.so
 
+# Use the non-open-source parts, if they're present
+-include vendor/samsung/coperve/BoardConfigVendor.mk
+
 # Bootanimation
 PRODUCT_COPY_FILES += \
     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
