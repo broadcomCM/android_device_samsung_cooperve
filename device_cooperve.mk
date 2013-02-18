@@ -300,7 +300,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/libswscale.so:system/lib/libswscale.so
 
 # Use the non-open-source parts, if they're present
--include vendor/samsung/coperve/BoardConfigVendor.mk
+-include vendor/samsung/cooperve/BoardConfigVendor.mk
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
