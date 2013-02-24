@@ -40,7 +40,11 @@ PRODUCT_PACKAGES += \
     dump_image \
     e2fsck \
     erase_image \
-    flash_image
+    flash_image \
+    Torch \
+    HoloSpiralWallpaper \
+    LiveWallpapersPicker \
+    VisualizationWallpapers
 
 # Add LDPI assets, in addition to MDPI
     PRODUCT_LOCALES += ldpi mdpi
@@ -51,6 +55,8 @@ PRODUCT_PACKAGES += \
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
+    frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/base/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
@@ -259,14 +265,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/egl/libGLES_hgl.so:system/lib/egl/libGLES_hgl.so \
 
-#Gralloc
-ifeq ($(BROADCOM_HW),true)
+# Gralloc
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/lib/hw/gralloc.cooperve.so:system/lib/hw/gralloc.default.so 
-else
-PRODUCT_PACKAGES += \
-    gralloc.cooperve
-endif
+
+# Enable if you build open Gralloc, then disable the prebuilt gralloc
+#PRODUCT_PACKAGES += \
+#    gralloc.cooperve
 
 # Media scanner apps
 PRODUCT_COPY_FILES += \
