@@ -30,6 +30,10 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Add LDPI assets, in addition to MDPI
     PRODUCT_LOCALES += ldpi mdpi
 
+# Torch
+PRODUCT_PACKAGES += \
+    Torch
+
 # Kernel modules
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/root/fsr.ko:root/fsr.ko \
