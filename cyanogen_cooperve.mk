@@ -23,12 +23,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-S5830i BUILD_ID=GRI40 BUILD_DISP
 # Add LDPI assets, in addition to MDPI
 PRODUCT_LOCALES += ldpi mdpi
 
-# Extra overlay for LDPI
+# Extra overlay for MDPI
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mdpi
 
 # Copy bootanimation
 PRODUCT_COPY_FILES += \
-     vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
+     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := GalaxyAcei
