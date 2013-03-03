@@ -115,3 +115,6 @@ ro.compcache.default=0
 persist.sys.use_dithering=0
 ro.telephony.call_ring.delay=0
 ro.ril.disable.power.collapse=0
+debug.sf.hw=1
+debug.composition.type=cpu
+debug.composition.type=gpu

@@ -22,10 +22,10 @@ include device/samsung/bcm21553-common/BoardConfigCommon.mk
 
 # Board
 TARGET_BOARD_PLATFORM := bcm21553
-
-# Recovery
 TARGET_BOOTLOADER_BOARD_NAME := cooperve
 TARGET_OTA_ASSERT_DEVICE := cooperve, GT-S5830i
+
+# Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_RECOVERY_HANDLES_MOUNT := true
 BOARD_HAS_DOWNLOAD_MODE := true
