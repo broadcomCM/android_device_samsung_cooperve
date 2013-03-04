@@ -18,6 +18,8 @@
 # Product-specific compile-time definitions.
 #
 
+LOCAL_PATH:= $(call my-dir)
+
 include device/samsung/bcm21553-common/BoardConfigCommon.mk
 
 # Board
