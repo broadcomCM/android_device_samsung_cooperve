@@ -45,13 +45,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/ramdisk/ueventd.gt-s5830i.rc:root/ueventd.gt-s5830i.rc \
     device/samsung/cooperve/ramdisk/init.gt-s5830i.rc:root/init.gt-s5830i.rc
-
-# Other kernel modules not in ramdisk
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/cooperve/prebuilt/kernel
-else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
