@@ -1,5 +1,5 @@
 #
-# system.prop for GT-S5360
+# system.prop for GT-S5830i
 #
 
 
@@ -118,3 +118,7 @@ ro.ril.disable.power.collapse=0
 debug.sf.hw=1
 debug.composition.type=cpu
 debug.composition.type=gpu
+persist.sys.use_16bpp_alpha=
+persist.sys.jit-mode=int:jit
+persist.sys.jit-mode=
+persist.sys.scrollingcache=3
