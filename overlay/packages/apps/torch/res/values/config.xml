@@ -23,7 +23,7 @@ for different hardware and product builds. -->
 <!-- If there is no sysfs-based control mechanism, enable this -->
 <bool name="useCameraInterface">false</bool>
 <!-- Full path to the sysfs toggle -->
-<string name="flashDevice">/sys/devices/virtual/ledflash/ledflash/ledflash_file</string>
+<string name="flashDevice">/sys/devices/virtual/camera/camera/camflash</string>
 <!-- Lowest setting -->
 <integer name="valueOn">1</integer>
 <!-- Middle setting -->
