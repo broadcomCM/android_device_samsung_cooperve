@@ -5,5 +5,5 @@
 
   <bool name="has_led_flash">true</bool>
   <!-- Notification LED has single color only -->
-  <bool name="has_single_notification_led">true</bool>
+  <bool name="has_single_notification_led">false</bool>
 </resources>
