@@ -49,22 +49,12 @@ on boot
         chmod 0666 /data/misc/sensors/accel_offset
 
 # WIFI
-	mkdir /system/etc/wifi 0770 wifi wifi
-	chmod 0770 /system/etc/wifi
-	chmod 0660 /system/etc/wifi/wpa_supplicant.conf
-	chown wifi wifi /system/etc/wifi/wpa_supplicant.conf
-	#wpa_supplicant control socket for android wifi.c (android private socket)
-	mkdir /data/misc/wifi 0770 wifi wifi
 	mkdir /data/misc/wifi/sockets 0770 wifi wifi
-	chmod 0770 /data/misc/wifi
-	chmod 0660 /data/misc/wifi/wpa_supplicant.conf
-	chown wifi wifi /data/misc/wifi
-	chown wifi wifi /data/misc/wifi/wpa_supplicant.conf
-
+	mkdir /data/misc/wifi/hostapd 0770 wifi wifi
 
 # DHCP
 	mkdir /data/misc/dhcp 0770 dhcp dhcp
-	setprop wifi.interface "eth0"
+setprop wifi.interface "eth0"
 
 service wpa_supplicant /system/bin/wpa_supplicant -dd -Dwext -ieth0 -c /data/misc/wifi/wpa_supplicant.conf
 	socket eth0 dgram 775 wifi wifi

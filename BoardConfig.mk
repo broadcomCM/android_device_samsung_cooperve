@@ -25,7 +25,6 @@ include device/samsung/bcm21553-common/BoardConfigCommon.mk
 # Board
 TARGET_BOARD_PLATFORM := bcm21553
 TARGET_BOOTLOADER_BOARD_NAME := cooperve
-TARGET_OTA_ASSERT_DEVICE := cooperve,GT-S5830i
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -35,10 +34,11 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 5242880
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 5242880
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 241172480
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 206831616
-BOARD_FLASH_BLOCK_SIZE := 4096
-TARGET_RECOVERY_INITRC := device/samsung/cooperve/recovery.rc
-BOARD_LDPI_RECOVERY := true
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/cooperve/recovery/recovery_ui.c
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+# We are using pre-built init.rc to fix wifi, as we don't have a specific CM7 kernel. (just cooperve)
+TARGET_PROVIDES_INIT := true
+TARGET_PROVIDES_INIT_TARGET_RC := true
 
 # Prebuilt kernel
 TARGET_PREBUILT_KERNEL := device/samsung/bcm21553-common/prebuilt/kernel

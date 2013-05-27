@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cooperve.mk
+    $(LOCAL_DIR)/full_cooperve.mk
