@@ -26,12 +26,6 @@ include device/samsung/bcm21553-common/BoardConfigCommon.mk
 TARGET_BOARD_PLATFORM := bcm21553
 TARGET_BOOTLOADER_BOARD_NAME := cooperve
 
-# Might fix ril bars
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.telephony.ril_class=SamsungRIL \
-ro.telephony.ril.v3=icccardstatus,datacall,signals trength,facilitylock \
-mobiledata.interfaces=pdp0,eth0,gprs,ppp0
-
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_RECOVERY_HANDLES_MOUNT := true
