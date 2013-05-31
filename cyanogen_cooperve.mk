@@ -1,5 +1,5 @@
 # Inherit AOSP device configuration for blade.
-$(call inherit-product, device/samsung/cooperve/device_cooperve.mk)
+$(call inherit-product, device/samsung/cooperve/full_cooperve.mk)
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cyanogen/products/common_full.mk)
