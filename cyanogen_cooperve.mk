@@ -1,5 +1,5 @@
 # Inherit AOSP device configuration for blade.
-$(call inherit-product, device/samsung/cooperve/full_cooperve.mk)
+$(call inherit-product, device/samsung/cooperve/full_cooperve.mk
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cyanogen/products/common_full.mk)
@@ -10,7 +10,9 @@ $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 # Include FM-Radio stuff
 $(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
 
+#
 # Setup device specific product configuration.
+#
 PRODUCT_NAME := cyanogen_cooperve
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := cooperve
@@ -29,3 +31,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_RELEASE_NAME := GalaxyAcei
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
 -include vendor/cyanogen/products/common_versions.mk
+
+#
+# Copy legend specific prebuilt files
+#
+PRODUCT_COPY_FILES +=  \
+    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
