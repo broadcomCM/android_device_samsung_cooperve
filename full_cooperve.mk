@@ -60,6 +60,16 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \
     device/samsung/cooperve/prebuilt/lib/libnetutils.so:system/lib/libnetutils.so \
 
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.opengles.version=131072
+
+PRODUCT_PROPERTY_OVERRIDES += \
+       wifi.interface=eth0 \
+       wifi.supplicant_scan_interval=15 \
+       dalvik.vm.heapsize=32m
+
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_cooperve
 PRODUCT_DEVICE := cooperve
