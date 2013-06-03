@@ -60,12 +60,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \
     device/samsung/cooperve/prebuilt/lib/libnetutils.so:system/lib/libnetutils.so \
 
-# Might fix ril bars
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.telephony.ril_class=SamsungRIL \
-ro.telephony.ril.v3=icccardstatus,datacall,signals trength,facilitylock \
-mobiledata.interfaces=pdp0,eth0,gprs,ppp0
-
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_cooperve
 PRODUCT_DEVICE := cooperve
