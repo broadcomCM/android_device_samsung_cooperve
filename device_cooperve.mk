@@ -255,9 +255,12 @@ PRODUCT_COPY_FILES += \
 # RIL properties
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libargs=-d/dev/smd0 \
-    rild.libpath=/system/lib/libbrcm_ril.so \
-    ro.telephony.ril_class=samsung \
-    ro.telephony.sends_barcount=1
+    rild.libpath=/system/lib/libbrcm_ril.so 
+    
+# New SamsungRIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=SamsungRIL \
+    mobiledata.interfaces=pdp0,eth0,gprs,ppp0    
 
 # Performance & graphics properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -318,7 +321,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
-    ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock \
+    ro.telephony.ril.v3=icccardstatus,datacall,signals trength,facilitylock \
     debug.gr.swapinterval=0 \
     persist.sys.usb.config=mass_storage,adb \
     sys.usb.config=mass_storage,adb \
