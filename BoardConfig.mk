@@ -25,7 +25,6 @@ include device/samsung/bcm21553-common/BoardConfigCommon.mk
 # Board
 TARGET_BOARD_PLATFORM := bcm21553
 TARGET_BOOTLOADER_BOARD_NAME := cooperve
-ARCH_ARM_HAVE_TLS_REGISTER := false
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
