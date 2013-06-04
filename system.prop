@@ -5,7 +5,7 @@
 
 #deox
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
-dalvik.vm.startheapsize=24m
+dalvik.vm.startheapsize=32m
 dalvik.vm.dexopt-data-only=1
 dalvik.vm.dexopt-flags=m=y
 dalvik.vm.heapsize=64m
@@ -17,7 +17,7 @@ ro.kernel.android.checkjni=1
 ro.ril.ntmodeglobal=true
 
 rild.libpath=/system/lib/libbrcm_ril.so
-ro.telephony.ril_class=samsung
+ro.telephony.ril_class=SamsungRIL
 rild.libargs=-d /dev/smd0
 DEVICE_PROVISIONED=1
 persist.rild.nitz_plmn=
@@ -62,7 +62,7 @@ net.dns2=8.8.4.4
 # Managing modem answere on switch from 2G to 3G
 ro.ril.ntmodeglobal=true
 
-ro.telephony.ril_class=samsung
+ro.telephony.ril_class=SamsungRIL
 mobiledata.interfaces=pdp0,eth0,gprs,ppp0
 
 # camera
@@ -119,3 +119,17 @@ persist.sys.use_16bpp_alpha=1
 persist.sys.jit-mode=int:jit
 persist.sys.jit-mode=1
 persist.sys.scrollingcache=3
+dalvik.vm.execution-mode=int:jit
+view.fading_edge_length=8
+view.minimum_fling_velocity=25
+view.scroll_friction=0.008
+view.touch_slop=15
+ro.media.dec.jpeg.memcap=10000000
+debug.composition.type=mdp
+media.stagefright.enable-player=true
+windowsmgr.max_events_per_sec=150
+debug.performance.tuning=1
+video.accelerate.hw=1
+ro.HOME_APP_ADJ=1
+debug.sf.hw=1
+persist.sys.use_dithering=1
