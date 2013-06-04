@@ -70,6 +70,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
        wifi.supplicant_scan_interval=15 \
        dalvik.vm.heapsize=32m
 
+# fixes ril bars
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=SamsungRIL \
+    ro.telephony.ril.v3=icccardstatus,datacall,signals trength,facilitylock \
+    mobiledata.interfaces=pdp0,eth0,gprs,ppp0
+
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_cooperve
 PRODUCT_DEVICE := cooperve
