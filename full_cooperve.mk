@@ -65,16 +65,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072
 
-PRODUCT_PROPERTY_OVERRIDES += \
-       wifi.interface=eth0 \
-       wifi.supplicant_scan_interval=15 \
-       dalvik.vm.heapsize=32m
-
-# fixes ril bars
+# Fix for RIL bars on Cooperve
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungRIL \
     ro.telephony.ril.v3=icccardstatus,datacall,signals trength,facilitylock \
-    mobiledata.interfaces=pdp0,eth0,gprs,ppp0
+    mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
+    ro.telephony.sends_barcount=1
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_cooperve
