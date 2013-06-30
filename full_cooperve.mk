@@ -47,8 +47,8 @@ PRODUCT_COPY_FILES += \
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/ramdisk/ueventd.gt-s5830i.rc:root/ueventd.gt-s5830i.rc \
-    device/samsung/cooperve/ramdisk/init.gt-s5830i.rc:root/init.gt-s5830i.rc
+    device/samsung/cooperve/ramdisk/init.rc:root/init.rc \
+    device/samsung/cooperve/ramdisk/init.bcm21553.rc:root/init.bcm21553.rc
 
 # Wifi files, using on device specific tree as totoro has wifi working thanks 
 # to modded RAMDISK not implemented yet on cooperve:
