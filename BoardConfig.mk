@@ -36,12 +36,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 241172480
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 206831616
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# We are using pre-built init.rc to fix wifi, as we don't have a specific CM7 kernel. (just cooperve)
-TARGET_PROVIDES_INIT := true
-TARGET_PROVIDES_INIT_TARGET_RC := true
-
 # Prebuilt kernel
-TARGET_PREBUILT_KERNEL := device/samsung/bcm21553-common/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/cooperve/prebuilt/kernel
 
 ## Enable if you build a kernel, then disable the prebuilt kernel
 #TARGET_KERNEL_CONFIG := cyanogenmod_cooperve_defconfig

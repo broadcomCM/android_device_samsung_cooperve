@@ -50,29 +50,12 @@ PRODUCT_COPY_FILES += \
     device/samsung/cooperve/ramdisk/init.rc:root/init.rc \
     device/samsung/cooperve/ramdisk/init.bcm21553.rc:root/init.bcm21553.rc
 
-# Wifi files, using on device specific tree as totoro has wifi working thanks 
-# to modded RAMDISK not implemented yet on cooperve:
+# Prebuilt Kernel - DELETE from the package
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+    LOCAL_KERNEL := device/samsung/cooperve/prebuilt/kernel
+else
+    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
 PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/prebuilt/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    device/samsung/cooperve/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/samsung/cooperve/prebuilt/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
-    device/samsung/cooperve/prebuilt/etc/wifi/nvram.txt:system/etc/wifi/nvram.txt \
-    device/samsung/cooperve/prebuilt/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \
-    device/samsung/cooperve/prebuilt/lib/libnetutils.so:system/lib/libnetutils.so \
-
-# The OpenGL ES API level that is natively supported by this device.
-# This is a 16.16 fixed point number
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.opengles.version=131072
-
-# Fix for RIL bars on Cooperve
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SamsungRIL \
-    ro.telephony.ril.v3=icccardstatus,datacall,signals trength,facilitylock \
-    mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
-    ro.telephony.sends_barcount=1
-
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := full_cooperve
-PRODUCT_DEVICE := cooperve
-PRODUCT_MODEL := gt-s5830i
+    $(LOCAL_KERNEL):kernel
