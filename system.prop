@@ -10,17 +10,22 @@ dalvik.vm.dexopt-flags=m=y
 dalvik.vm.heapsize=32m
 dalvik.vm.checkjni=false
 dalvik.vm.execution-mode=int:jit
+dalvik.vm.lockprof.threshold=500
 ro.kernel.android.checkjni=1
+dev.sfbootcomplete=0
+
+# Screen Rotation
+persist.sys.rotationanimation=false
+
+# Bluetooth
+net.bt.name=Android
 
 # RIL
-ro.ril.ntmodeglobal=true
 rild.libpath=/system/lib/libbrcm_ril.so
 ro.telephony.ril_class=samsung
-mobiledata.interfaces=pdp0,eth0,gprs,ppp0
-ro.telephony.ril.v3=icccardstatus,datacall,signals trength,facilitylock \
-ro.telephony.sends_barcount=1
 rild.libargs=-d /dev/smd0
 DEVICE_PROVISIONED=1
+ro.ril.ntmodeglobal=true
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -30,65 +35,35 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
+mobiledata.interfaces=pdp0,eth0,gprs,ppp0
 ro.telephony.call_ring.delay=0
 ro.ril.disable.power.collapse=0
-
-#Display
+	
+# Display
 ro.sf.lcd_density=160
 qemu.sf.lcd_density=160
-debug.sf.hw=1
+video.accelerate.hw=1
+ro.opengles.version=131072
+
+# Google Location
+ro.com.google.locationfeatures=1
+ro.com.google.networklocation=1
 
 # Wifi interface
 wifi.interface=eth0
-
-# Network settings + 3G/EDGE Hacks
-ro.ril.hep=1
-ro.ril.hsxpa=1
-ro.ril.enable.dtm=1
-ro.ril.gprsclass=10
-ro.ril.enable.a52=1
-ro.ril.enable.a53=1
-ro.ril.hsdpa.category=28
-ro.ril.hsupa.category=7
-ro.ril.enable.3g.prefix=1
-ro.ril.oem.nosim.ecclist=911,112,999,000,08,118,120,122,110,119,995,113,115,1530,1522 \
-ro.ril.emc.mode=2
-ro.com.android.dataroaming=false
-net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
+wifi.supplicant_scan_interval=15
 net.rmnet0.dns1=8.8.8.8
 net.rmnet0.dns2=8.8.4.4
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
 
-# Managing modem answere on switch from 2G to 3G
-ro.ril.ntmodeglobal=true
+# USB / SD card
+persist.service.usb.setting=0
+persist.sys.vold.switchexternal=1
 
-# Camera
-ro.media.enc.hprof.file.format=3gp
-ro.media.enc.lprof.file.format=3gp
-ro.media.enc.hprof.codec.vid=m4v
-ro.media.enc.lprof.codec.vid=h263
-ro.media.enc.hprof.codec.aud=aac
-ro.media.enc.lprof.codec.aud=amrnb
-ro.media.enc.hprof.vid.width=352
-ro.media.enc.lprof.vid.width=176
-ro.media.enc.hprof.vid.height=288
-ro.media.enc.lprof.vid.height=144
-ro.media.enc.hprof.vid.fps=30
-ro.media.enc.lprof.vid.fps=30
-ro.media.enc.hprof.vid.bps=384000
-ro.media.enc.lprof.vid.bps=192000
-ro.media.enc.hprof.aud.bps=23450
-ro.media.enc.lprof.aud.bps=23450
-ro.media.enc.hprof.aud.ch=1
-ro.media.enc.lprof.aud.ch=1
-ro.media.enc.hprof.aud.hz=8000
-ro.media.enc.lprof.aud.hz=8000
-ro.media.cam.preview.fps=15
+# Statgefright
+media.stagefright.enable-player=true
+ro.media.dec.jpeg.memcap=10000000
 
 #Alsa
 alsa.mixer.playback.master=Speaker
@@ -104,32 +79,23 @@ alsa.mixer.capture.bt.sco=BTHeadset
 alsa.mixer.playback.bt.a2dp=BTHeadset
 alsa.mixer.capture.bt.a2dp=BTHeadset
 
-#Tweaks
-ro.setupwizard.enable_bypass=1
-dalvik.vm.lockprof.threshold=500
-ro.config.hw_menu_unlockscreen=false
-media.stagefright.enable-player=false
-persist.sys.vold.switchexternal=1
-persist.sys.purgeable_assets=0
+# Performance Tweaks
 ro.compcache.default=0
 persist.sys.use_dithering=0
-debug.composition.type=cpu
-debug.composition.type=gpu
+view.fading_edge_length=8v
+view.minimum_fling_velocity=25
+view.scroll_friction=0.008
+view.touch_slop=15 X
+debug.composition.type=mdp
+windowsmgr.max_events_per_sec=150
+debug.performance.tuning=1
+
+# CM parts hack
 persist.sys.use_16bpp_alpha=1
 persist.sys.jit-mode=int:jit
 persist.sys.jit-mode=1
 persist.sys.scrollingcache=3
-dalvik.vm.execution-mode=int:jit
-view.fading_edge_length=8
-view.minimum_fling_velocity=25
-view.scroll_friction=0.008
-view.touch_slop=15
-ro.media.dec.jpeg.memcap=10000000
-debug.composition.type=mdp
-media.stagefright.enable-player=true
-windowsmgr.max_events_per_sec=150
-debug.performance.tuning=1
-video.accelerate.hw=1
-ro.opengles.version=131072
-ro.HOME_APP_ADJ=1
-persist.sys.use_dithering=1
+
+#Tweaks
+ro.setupwizard.enable_bypass=1
+persist.sys.purgeable_assets=1
