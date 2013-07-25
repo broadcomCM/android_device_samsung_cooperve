@@ -36,6 +36,9 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 PRODUCT_PACKAGES += \
     Torch
 
+# add mobile networks
+BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
+
 # Kernel modules
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/root/fsr.ko:root/fsr.ko \
