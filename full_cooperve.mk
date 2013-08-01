@@ -14,7 +14,7 @@
 
 # Inherit products
 $(call inherit-product, device/samsung/bcm21553-common/common.mk)
-$(call inherit-product, vendor/samsung/cooperve/cooperve-vendor.mk)
+$(call inherit-product, vendor/samsung/cooperve/vendor_blobs.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
