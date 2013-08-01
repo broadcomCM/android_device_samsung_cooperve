@@ -1,0 +1,85 @@
+#
+# system.prop for GT-S5830i
+#
+
+# Dalvik
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
+dalvik.vm.startheapsize=32m
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.dexopt-flags=m=y
+dalvik.vm.heapsize=32m
+dalvik.vm.checkjni=false
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.lockprof.threshold=500
+ro.kernel.android.checkjni=1
+dev.sfbootcomplete=0
+
+# Bluetooth
+net.bt.name=Android
+
+# RIL
+rild.libpath=/system/lib/libbrcm_ril.so
+ro.telephony.ril_class=samsung
+rild.libargs=-d /dev/smd0
+DEVICE_PROVISIONED=1
+ro.ril.ntmodeglobal=true
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+mobiledata.interfaces=pdp0,eth0,gprs,ppp0
+ro.telephony.call_ring.delay=0
+ro.ril.disable.power.collapse=0
+	
+# Display
+ro.sf.lcd_density=160
+qemu.sf.lcd_density=160
+video.accelerate.hw=1
+ro.opengles.version=131072
+
+# Google Location
+ro.com.google.locationfeatures=1
+ro.com.google.networklocation=1
+
+# Wifi interface
+wifi.interface=eth0
+wifi.supplicant_scan_interval=15
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+# USB / SD card
+persist.service.usb.setting=0
+persist.sys.vold.switchexternal=1
+
+# Statgefright
+media.stagefright.enable-player=true
+ro.media.dec.jpeg.memcap=10000000
+
+#Alsa
+alsa.mixer.playback.master=Speaker
+alsa.mixer.capture.master=Mic
+alsa.mixer.playback.earpiece=Earpiece
+alsa.mixer.capture.earpiece=Mic
+alsa.mixer.playback.headset=Headset
+alsa.mixer.capture.headset=Mic
+alsa.mixer.playback.speaker=Speaker
+alsa.mixer.capture.speaker=Mic
+alsa.mixer.playback.bt.sco=BTHeadset
+alsa.mixer.capture.bt.sco=BTHeadset
+alsa.mixer.playback.bt.a2dp=BTHeadset
+alsa.mixer.capture.bt.a2dp=BTHeadset
+
+# Performance Tweaks
+debug.composition.type=mdp
+windowsmgr.max_events_per_sec=150
+
+#Tweaks
+ro.setupwizard.enable_bypass=1
+persist.sys.purgeable_assets=1

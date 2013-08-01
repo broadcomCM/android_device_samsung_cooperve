@@ -1,0 +1,124 @@
+diff --git a/include/utils/Looper.h b/include/utils/Looper.h
+index eefff31..18dfe6b 100644
+--- a/include/utils/Looper.h
++++ b/include/utils/Looper.h
+@@ -25,7 +25,7 @@
+ #include <android/looper.h>
+ 
+ // When defined, uses epoll_wait() for polling, otherwise uses poll().
+-#define LOOPER_USES_EPOLL
++//#define LOOPER_USES_EPOLL
+ 
+ // When defined, logs performance statistics for tuning and debugging purposes.
+ //#define LOOPER_STATISTICS
+diff --git a/opengl/libs/EGL/getProcAddress.cpp b/opengl/libs/EGL/getProcAddress.cpp
+index dcf8735..db5b67a 100644
+--- a/opengl/libs/EGL/getProcAddress.cpp
++++ b/opengl/libs/EGL/getProcAddress.cpp
+@@ -41,8 +41,12 @@ namespace android {
+             "mrc p15, 0, " #reg ", c13, c0, 3 \n"
+     #else
+         #define GET_TLS(reg) \
++            "push  {r0,r1,r2,r3,lr}           \n"  \
+             "mov   " #reg ", #0xFFFF0FFF      \n"  \
+-            "ldr   " #reg ", [" #reg ", #-15] \n"
++            "sub   " #reg "," #reg ",#0x1F    \n"  \
++            "blx   " #reg "                   \n"  \
++            "mov   " #reg ", r0               \n"  \
++            "pop   {r0,r1,r2,r3,lr}           \n"
+     #endif
+ 
+     #define API_ENTRY(_api) __attribute__((naked)) _api
+@@ -50,8 +54,9 @@ namespace android {
+     #define CALL_GL_EXTENSION_API(_api)                         \
+          asm volatile(                                          \
+             GET_TLS(r12)                                        \
+-            "ldr   r12, [r12, %[tls]] \n"                       \
+             "cmp   r12, #0            \n"                       \
++            "ldrne r12, [r12, %[tls]] \n"                       \
++            "cmpne r12, #0            \n"                       \
+             "ldrne r12, [r12, %[api]] \n"                       \
+             "cmpne r12, #0            \n"                       \
+             "bxne  r12                \n"                       \
+diff --git a/opengl/libs/GLES2/gl2.cpp b/opengl/libs/GLES2/gl2.cpp
+index af5734c..67c2e81 100644
+--- a/opengl/libs/GLES2/gl2.cpp
++++ b/opengl/libs/GLES2/gl2.cpp
+@@ -55,8 +55,12 @@ using namespace android;
+             MUNGE_TLS(reg)
+     #else
+         #define GET_TLS(reg) \
++            "push  {r0,r1,r2,r3,lr}           \n"  \
+             "mov   " #reg ", #0xFFFF0FFF      \n"  \
+-            "ldr   " #reg ", [" #reg ", #-15] \n"
++            "sub   " #reg "," #reg ",#0x1F    \n"  \
++            "blx   " #reg "                   \n"  \
++            "mov   " #reg ", r0               \n"  \
++            "pop   {r0,r1,r2,r3,lr}           \n"
+     #endif
+ 
+     #define API_ENTRY(_api) __attribute__((naked)) _api
+@@ -64,8 +68,9 @@ using namespace android;
+     #define CALL_GL_API(_api, ...)                              \
+          asm volatile(                                          \
+             GET_TLS(r12)                                        \
+-            "ldr   r12, [r12, %[tls]] \n"                       \
+             "cmp   r12, #0            \n"                       \
++            "ldrne   r12, [r12, %[tls]] \n"                     \
++            "cmpne   r12, #0          \n"                       \
+             "ldrne pc,  [r12, %[api]] \n"                       \
+             "mov   r0, #0             \n"                       \
+             "bx    lr                 \n"                       \
+diff --git a/opengl/libs/GLES_CM/gl.cpp b/opengl/libs/GLES_CM/gl.cpp
+index b62515b..06a4d08 100644
+--- a/opengl/libs/GLES_CM/gl.cpp
++++ b/opengl/libs/GLES_CM/gl.cpp
+@@ -111,8 +111,12 @@ GL_API void GL_APIENTRY glWeightPointerOESBounds(GLint size, GLenum type,
+             MUNGE_TLS(reg)
+     #else
+         #define GET_TLS(reg) \
++            "push  {r0,r1,r2,r3,lr}           \n"  \
+             "mov   " #reg ", #0xFFFF0FFF      \n"  \
+-            "ldr   " #reg ", [" #reg ", #-15] \n"
++            "sub   " #reg "," #reg ",#0x1F    \n"  \
++            "blx   " #reg "                   \n"  \
++            "mov   " #reg ", r0               \n"  \
++            "pop   {r0,r1,r2,r3,lr}           \n"
+     #endif
+ 
+     #define API_ENTRY(_api) __attribute__((naked)) _api
+@@ -120,8 +124,9 @@ GL_API void GL_APIENTRY glWeightPointerOESBounds(GLint size, GLenum type,
+     #define CALL_GL_API(_api, ...)                              \
+          asm volatile(                                          \
+             GET_TLS(r12)                                        \
+-            "ldr   r12, [r12, %[tls]] \n"                       \
+             "cmp   r12, #0            \n"                       \
++            "ldrne   r12, [r12, %[tls]] \n"                     \
++            "cmpne   r12, #0          \n"                       \
+             "ldrne pc,  [r12, %[api]] \n"                       \
+             "mov   r0, #0             \n"                       \
+             "bx    lr                 \n"                       \
+diff --git a/services/surfaceflinger/DisplayHardware/DisplayHardware.cpp b/services/surfaceflinger/DisplayHardware/DisplayHardware.cpp
+index 844cf18..da826d7 100644
+--- a/services/surfaceflinger/DisplayHardware/DisplayHardware.cpp
++++ b/services/surfaceflinger/DisplayHardware/DisplayHardware.cpp
+@@ -238,7 +238,8 @@ void DisplayHardware::init(uint32_t dpy)
+     glGetIntegerv(GL_MAX_VIEWPORT_DIMS, &mMaxViewportDims);
+ 
+ 
+-#ifdef EGL_ANDROID_swap_rectangle
++//#ifdef EGL_ANDROID_swap_rectangle
++#ifndef EGL_ANDROID_swap_rectangle
+     if (extensions.hasExtension("EGL_ANDROID_swap_rectangle")) {
+         if (eglSetSwapRectangleANDROID(display, surface,
+                 0, 0, mWidth, mHeight) == EGL_TRUE) {
+@@ -317,7 +318,8 @@ void DisplayHardware::flip(const Region& dirty) const
+     EGLDisplay dpy = mDisplay;
+     EGLSurface surface = mSurface;
+ 
+-#ifdef EGL_ANDROID_swap_rectangle    
++//#ifdef EGL_ANDROID_swap_rectangle
++#ifndef EGL_ANDROID_swap_rectangle
+     if (mFlags & SWAP_RECTANGLE) {
+         const Region newDirty(dirty.intersect(bounds()));
+         const Rect b(newDirty.getBounds());
