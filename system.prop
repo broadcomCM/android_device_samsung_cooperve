@@ -86,7 +86,6 @@ view.fading_edge_length=8v
 view.minimum_fling_velocity=25
 view.scroll_friction=0.008
 view.touch_slop=15 X
-debug.composition.type=mdp
 windowsmgr.max_events_per_sec=150
 debug.performance.tuning=1
 
@@ -99,3 +98,14 @@ persist.sys.scrollingcache=3
 #Tweaks
 ro.setupwizard.enable_bypass=1
 persist.sys.purgeable_assets=1
+
+# For CyanMobile eXperience
+debug.composition.type=gpu
+persist.sys.composition.type=gpu
+persist.sys.ui.hw=true
+ro.config.hw_menu_unlockscreen=false
+ro.service.swiqi.supported=true
+debug.sf.hw=1
+ro.squadzone.build=1
+persist.sys.gmaps_hack=1
+
