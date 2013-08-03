@@ -1,8 +1,8 @@
-Device Galaxy Ace i
+Device Cooperve
 ===================
 
-Device tree for Samsung Galaxy Ace i S5830i, s5830M, s5830C - CM7
+Device tree for Samsung Galaxy Ace i S5830i, S5830M, S5830C, sS5839i - CyanMobile eXperience
 
-Maintainer: Bieltv.3 & Spacecaker
+Maintainer: Lopicl & Bieltv.3 & Spacecaker
 
-Note: to build you must paste cyanogen_cooperve.mk to vendor/cyanogen/products
+Note: to build you must paste cyanogen_cooperve.mk and AndroidProducts.mk to vendor/cyanogen/products
