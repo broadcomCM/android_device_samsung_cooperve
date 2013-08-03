@@ -44,6 +44,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Add LDPI assets, in addition to MDPI
     PRODUCT_LOCALES += ldpi mdpi
 
+<<<<<<< HEAD
 # Kernel modules
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/root/fsr.ko:root/fsr.ko \
@@ -65,6 +66,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/ramdisk/init.rc:root/init.rc \
     device/samsung/cooperve/ramdisk/init.bcm21553.rc:root/init.bcm21553.rc
+=======
+# Torch
+PRODUCT_PACKAGES += \
+    Torch
+>>>>>>> 7443d2b... Clen not used ramdisk and recovery files, fix 3g / Wifi issues
 
 # Prebuilt Kernel - DELETE from the package
 ifeq ($(TARGET_PREBUILT_KERNEL),)
