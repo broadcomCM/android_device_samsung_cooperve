@@ -3,7 +3,7 @@ Device Galaxy Ace i - AOSP GB 2.3.7
 
 Device tree for Samsung Galaxy Ace i S5830i, s5830M, s5830C - CM7
 
-Maintainer: Bieltv.3 & Spacecaker
+Maintainer: Spacecaker
 
 When compiling for this acei 
 do this 
