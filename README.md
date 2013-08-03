@@ -1,5 +1,5 @@
-Device Galaxy Ace i
-===================
+Device Galaxy Ace i - CyanogenMod 7.2
+=====================================
 
 Device tree for Samsung Galaxy Ace i S5830i, s5830M, s5830C - CM7
 
