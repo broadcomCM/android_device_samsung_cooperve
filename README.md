@@ -25,9 +25,11 @@ HOW TO BUILD CYANMOBILE FOR COOPERVE
 14. cd ../../
 15. download dalvik/vm/native libs from https://github.com/CyanogenMod/android_dalvik/tree/gingerbread/vm/native
 16. replace bootable/recovery with cm7 original bootable/recovery https://github.com/CyanogenMod/android_bootable_recovery
-17. now you go! go to main source tree and type ". build/envsetup.sh && brunch cooperve"!
-18. Take the zip from out/target/product/cooperve
-19. Remember to do not use the boot.img inside the zip!
+17. cp device/samsung/cyanogen_cooperve.mk vendors/cyanogen/products
+18. gedit vendors/cyanogen/products/AndroidProducts.mk (remove all the lines and add cooperve)
+18. now you go! go to main source tree and type ". build/envsetup.sh && brunch cooperve"!
+19. Take the zip from out/target/product/cooperve
+20. Remember to do not use the boot.img inside the zip!
 
 Brought to you by Lopicl.00
 
