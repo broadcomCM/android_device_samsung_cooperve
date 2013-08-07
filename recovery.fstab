@@ -1,15 +1,7 @@
 # mount     fstype  device                  [device2]   [fstype2]   [fsoptions]         [fsoptions2]
-<<<<<<< HEAD
 
 /data       ext4    /dev/block/stl11        NULL        rfs         NULL                check=no
 /sdcard     vfat    /dev/block/mmcblk0p1
 /system     ext4    /dev/block/stl9         NULL        rfs         NULL                check=no
 /cache      ext4    /dev/block/stl10        NULL        rfs         NULL                check=no
 
-=======
-
-/data       ext4    /dev/block/stl11        NULL        rfs         NULL                check=no
-/sdcard     vfat    /dev/block/mmcblk0p1
-/system     ext4    /dev/block/stl9         NULL        rfs         NULL                check=no
-/cache      ext4    /dev/block/stl10        NULL        rfs         NULL                check=no
->>>>>>> 055c7b7edf1eb733f300eb1c9b9f4949922f2e3b
