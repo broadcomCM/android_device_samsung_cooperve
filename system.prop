@@ -46,8 +46,8 @@ video.accelerate.hw=1
 ro.opengles.version=131072
 
 # Google Location
-ro.com.google.locationfeatures=1
-ro.com.google.networklocation=1
+ro.com.google.locationfeatures=0
+ro.com.google.networklocation=0
 
 # Wifi interface
 wifi.interface=eth0
@@ -115,6 +115,18 @@ persist.sys.jit-mode=int:jit
 persist.sys.jit-mode=1
 persist.sys.scrollingcache=3
 
-#Tweaks
+# Tweaks
 ro.setupwizard.enable_bypass=1
 persist.sys.purgeable_assets=1
+
+# DNS Fix
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.gprs.dns1=8.8.8.8
+net.gprs.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.eth0.dns1=8.8.8.8
+net.eth0.dns2=8.8.4.4
