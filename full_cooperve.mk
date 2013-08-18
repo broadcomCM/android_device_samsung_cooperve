@@ -44,6 +44,10 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Add LDPI assets, in addition to MDPI
     PRODUCT_LOCALES += ldpi mdpi
 
+# Apns_Conf
+PRODUCT_COPY_FILES += \
+    device/samsung/cooperve/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Prebuilt Kernel - DELETE from the package
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := device/samsung/cooperve/prebuilt/kernel
