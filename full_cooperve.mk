@@ -44,14 +44,6 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Add LDPI assets, in addition to MDPI
     PRODUCT_LOCALES += ldpi mdpi
 
-# Sound
-PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/prebuilt/lib/libasound.so:system/lib/libasound.so \
-    device/samsung/cooperve/prebuilt/lib/libaudio.so:system/lib/libaudio.so \
-    device/samsung/cooperve/prebuilt/lib/libaudioeffect_jni.so:system/lib/libaudioeffect_jni.so \
-    device/samsung/cooperve/prebuilt/lib/libaudioflinger.so:system/lib/libaudioflinger.so \
-    device/samsung/cooperve/prebuilt/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so
-
 # Prebuilt Kernel - DELETE from the package
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := device/samsung/cooperve/prebuilt/kernel

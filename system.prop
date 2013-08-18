@@ -43,8 +43,8 @@ video.accelerate.hw=1
 ro.opengles.version=131072
 
 # Google Location
-ro.com.google.locationfeatures=1
-ro.com.google.networklocation=1
+ro.com.google.locationfeatures=0
+ro.com.google.networklocation=0
 
 # Wifi interface
 wifi.interface=eth0
@@ -72,10 +72,51 @@ alsa.mixer.capture.bt.sco=BTHeadset
 alsa.mixer.playback.bt.a2dp=BTHeadset
 alsa.mixer.capture.bt.a2dp=BTHeadset
 
+# Camera
+ro.media.enc.hprof.file.format=3gp
+ro.media.enc.lprof.file.format=3gp
+ro.media.enc.hprof.codec.vid=m4v
+ro.media.enc.lprof.codec.vid=h263
+ro.media.enc.hprof.codec.aud=aac
+ro.media.enc.lprof.codec.aud=amrnb
+ro.media.enc.hprof.vid.width=352
+ro.media.enc.lprof.vid.width=176
+ro.media.enc.hprof.vid.height=288
+ro.media.enc.lprof.vid.height=144
+ro.media.enc.hprof.vid.fps=30
+ro.media.enc.lprof.vid.fps=30
+ro.media.enc.hprof.vid.bps=384000
+ro.media.enc.lprof.vid.bps=192000
+ro.media.enc.hprof.aud.bps=23450
+ro.media.enc.lprof.aud.bps=23450
+ro.media.enc.hprof.aud.ch=1
+ro.media.enc.lprof.aud.ch=1
+ro.media.enc.hprof.aud.hz=8000
+ro.media.enc.lprof.aud.hz=8000
+ro.media.cam.preview.fps=15
+
 # Performance Tweaks
+ro.compcache.default=0
+persist.sys.use_dithering=0
+view.fading_edge_length=8v
+view.minimum_fling_velocity=25
+view.scroll_friction=0.008
+view.touch_slop=15 X
 debug.composition.type=mdp
 windowsmgr.max_events_per_sec=150
 
-#Tweaks
+# Tweaks
 ro.setupwizard.enable_bypass=1
 persist.sys.purgeable_assets=1
+
+# DNS Fix
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.gprs.dns1=8.8.8.8
+net.gprs.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.eth0.dns1=8.8.8.8
+net.eth0.dns2=8.8.4.4
