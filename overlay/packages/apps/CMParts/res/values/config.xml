@@ -3,9 +3,9 @@
     <!-- Whether or not to display the trackball settings -->
     <bool name="has_trackball">false</bool>
 
-    <bool name="has_single_notification_led">true</bool>
+    <bool name="has_single_notification_led">false</bool>
 
     <!-- Whether or not to display search button settings -->
     <bool name="has_search_button">true</bool>
-
+    <bool name="config_torch_available">true</bool>
 </resources>
