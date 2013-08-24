@@ -23,7 +23,7 @@ for different hardware and product builds. -->
 <!-- If there is no sysfs-based control mechanism, enable this -->
 <bool name="useCameraInterface">true</bool>
 <!-- Full path to the sysfs toggle -->
-<string name="flashDevice">/sys/class/backlight/aat1401-backlight/brightness</string>
+<string name="flashDevice">/sys/class/camera/camera/camflash</string>
 <!-- Lowest setting -->
 <integer name="valueOn">1</integer>
 <!-- Middle setting -->
