@@ -32,6 +32,11 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Add LDPI assets, in addition to MDPI
     PRODUCT_LOCALES += ldpi mdpi
 
+# Discard inherited values and use our own instead.
+PRODUCT_NAME := cooperve
+PRODUCT_DEVICE := cooperve
+PRODUCT_MODEL := GT-S5830i
+
 # Torch
 PRODUCT_PACKAGES += \
     Torch
@@ -45,3 +50,4 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
