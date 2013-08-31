@@ -14,12 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),cooperve)
-
-ifneq ($(TARGET_SIMULATOR),true)
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),cooperve)
+    include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
-
-endif
-
 
