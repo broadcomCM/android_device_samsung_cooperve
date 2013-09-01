@@ -14,6 +14,8 @@ dalvik.vm.lockprof.threshold=500
 ro.kernel.android.checkjni=1
 dev.sfbootcomplete=0
 
+
+
 # Bluetooth
 net.bt.name=Android
 
@@ -34,6 +36,7 @@ ro.sf.lcd_density=160
 qemu.sf.lcd_density=160
 video.accelerate.hw=1
 ro.opengles.version=131072
+media.stagefright.enable-player=true
 
 # Google Location
 ro.com.google.locationfeatures=1
@@ -50,43 +53,6 @@ persist.sys.vold.switchexternal=1
 # Statgefright
 media.stagefright.enable-player=true
 ro.media.dec.jpeg.memcap=10000000
-
-#Alsa
-alsa.mixer.playback.master=Speaker
-alsa.mixer.capture.master=Mic
-alsa.mixer.playback.earpiece=Earpiece
-alsa.mixer.capture.earpiece=Mic
-alsa.mixer.playback.headset=Headset
-alsa.mixer.capture.headset=Mic
-alsa.mixer.playback.speaker=Speaker
-alsa.mixer.capture.speaker=Mic
-alsa.mixer.playback.bt.sco=BTHeadset
-alsa.mixer.capture.bt.sco=BTHeadset
-alsa.mixer.playback.bt.a2dp=BTHeadset
-alsa.mixer.capture.bt.a2dp=BTHeadset
-
-# Camera
-ro.media.enc.hprof.file.format=3gp
-ro.media.enc.lprof.file.format=3gp
-ro.media.enc.hprof.codec.vid=m4v
-ro.media.enc.lprof.codec.vid=h263
-ro.media.enc.hprof.codec.aud=aac
-ro.media.enc.lprof.codec.aud=amrnb
-ro.media.enc.hprof.vid.width=352
-ro.media.enc.lprof.vid.width=176
-ro.media.enc.hprof.vid.height=288
-ro.media.enc.lprof.vid.height=144
-ro.media.enc.hprof.vid.fps=30
-ro.media.enc.lprof.vid.fps=30
-ro.media.enc.hprof.vid.bps=384000
-ro.media.enc.lprof.vid.bps=192000
-ro.media.enc.hprof.aud.bps=23450
-ro.media.enc.lprof.aud.bps=23450
-ro.media.enc.hprof.aud.ch=1
-ro.media.enc.lprof.aud.ch=1
-ro.media.enc.hprof.aud.hz=8000
-ro.media.enc.lprof.aud.hz=8000
-ro.media.cam.preview.fps=15
 
 # Performance Tweaks
 ro.compcache.default=0
