@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/samsung/cooperve/recovery.mk)
+$(call inherit-product, device/samsung/bcm21553-common/recoveryCommon.mk)
 
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/recovery.fstab:root/recovery.fstab
