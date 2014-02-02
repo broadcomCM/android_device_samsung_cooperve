@@ -23,21 +23,37 @@ LOCAL_PATH:= $(call my-dir)
 include device/samsung/bcm21553-common/BoardConfigCommon.mk
 
 # Board
-TARGET_BOARD_PLATFORM := bcm21553
-TARGET_BOOTLOADER_BOARD_NAME := cooperve
+TARGET_BOARD_PLATFORM				:= bcm21553
+TARGET_BOOTLOADER_BOARD_NAME			:= cooperve
+
+# Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE			:= 7357568
+BOARD_RECOVERYIMAGE_PARTITION_SIZE		:= 7357568
+BOARD_SYSTEMIMAGE_PARTITION_SIZE		:= 241172480
+BOARD_USERDATAIMAGE_PARTITION_SIZE		:= 206831616
+BOARD_FLASH_BLOCK_SIZE				:= 131072
+TARGET_USERIMAGES_USE_EXT4			:= true
+BOARD_HAS_SDCARD_INTERNAL			:= true
+BOARD_HAS_DOWNLOAD_MODE				:= true
+
+# Kernel
+#BOARD_CUSTOM_BOOTIMG_MK			:= device/samsung/cooperve/shbootimg.mk
+#TARGET_KERNEL_CONFIG				:= cyanogenmod_cooperve_defconfig
+TARGET_PREBUILT_KERNEL				:= device/samsung/cooperve/prebuilt/kernel
+BOARD_KERNEL_BASE				:= 0x81600000
+BOARD_KERNEL_PAGESIZE				:= 4096
+BOARD_NAND_PAGE_SIZE				:= 4096 -s 128
+BOARD_PAGE_SIZE					:= 0x00001000
 
 # Recovery
-TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_RECOVERY_HANDLES_MOUNT := true
-BOARD_HAS_DOWNLOAD_MODE := true
-BOARD_BOOTIMAGE_PARTITION_SIZE := 7357568
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 7357568
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 241172480
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 206831616
-BOARD_FLASH_BLOCK_SIZE := 131072
-
-# Prebuilt kernel
-TARGET_PREBUILT_KERNEL := device/samsung/cooperve/prebuilt/kernel
-
-## Enable if you build a kernel, then disable the prebuilt kernel
-#TARGET_KERNEL_CONFIG := cyanogenmod_cooperve_defconfig
+#BOARD_USES_COMBINED_RECOVERY 			:= true
+BOARD_LDPI_RECOVERY				:= true
+BOARD_RECOVERY_HANDLES_MOUNT			:= true
+BOARD_RECOVERY_HANDLES_MOUNT			:= true
+TARGET_PROVIDES_INIT_RC				:= true
+BOARD_HAS_NO_RECOVERY_PARTITION			:= true
+BOARD_CUSTOM_RECOVERY_KEYMAPPING		:= device/samsung/cooperve/recovery/recovery_ui.c
+BOARD_CUSTOM_GRAPHICS				:= device/samsung/cooperve/recovery/graphics.c
+TARGET_RECOVERY_FSTAB				:= device/samsung/cooperve/recovery.fstab
+TARGET_RECOVERY_INITRC				:= device/samsung/cooperve/prebuilt/root/recovery.rc
+BOARD_CUSTOM_PROP_TARGET			:= device/samsung/cooperve/prebuilt/root/default.prop
