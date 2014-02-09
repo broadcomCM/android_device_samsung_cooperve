@@ -16,9 +16,6 @@
 $(call inherit-product, device/samsung/bcm21553-common/common.mk)
 $(call inherit-product, vendor/samsung/cooperve/vendor_blobs.mk)
 
-# Recovery
-$(call inherit-product, device/samsung/cooperve/recovery.mk)
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 

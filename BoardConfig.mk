@@ -27,7 +27,6 @@ TARGET_BOARD_PLATFORM				:= bcm21553
 TARGET_BOOTLOADER_BOARD_NAME			:= cooperve
 
 # Kernel
-#BOARD_CUSTOM_BOOTIMG_MK			:= device/samsung/cooperve/shbootimg.mk
 #TARGET_KERNEL_CONFIG				:= cyanogenmod_cooperve_defconfig
 TARGET_PREBUILT_KERNEL				:= device/samsung/cooperve/prebuilt/kernel
 BOARD_KERNEL_BASE				:= 0x81600000
@@ -36,8 +35,6 @@ BOARD_NAND_PAGE_SIZE				:= 4096 -s 128
 BOARD_PAGE_SIZE					:= 0x00001000
 
 # Recovery
-#BOARD_USES_COMBINED_RECOVERY 			:= true
-#BOARD_LDPI_RECOVERY				:= true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING		:= ../../device/samsung/cooperve/recovery/recovery_ui.c
 BOARD_CUSTOM_GRAPHICS				:= ../../../device/samsung/cooperve/recovery/graphics.c
 TARGET_RECOVERY_FSTAB				:= device/samsung/cooperve/recovery.fstab
