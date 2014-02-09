@@ -55,7 +55,6 @@ int device_handle_key(int key_code, int visible) {
 	  case KEY_HOME:
 	  case KEY_POWER:
 	    return SELECT_ITEM;
-	  case KEY_MENU:
 	  case KEY_BACK:
 	    return GO_BACK;
         }
