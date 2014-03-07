@@ -14,8 +14,6 @@ dalvik.vm.lockprof.threshold=500
 ro.kernel.android.checkjni=1
 dev.sfbootcomplete=0
 
-
-
 # Bluetooth
 net.bt.name=Android
 

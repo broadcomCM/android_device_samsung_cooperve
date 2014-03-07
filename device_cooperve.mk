@@ -20,15 +20,6 @@ $(call inherit-product, vendor/samsung/cooperve/vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mdpi
 
-# Kernel modules
-#PRODUCT_COPY_FILES += \
-#    device/samsung/cooperve/prebuilt/root/fsr.ko:root/fsr.ko \
-#    device/samsung/cooperve/prebuilt/root/fsr_stl.ko:root/fsr_stl.ko \
-#    device/samsung/cooperve/prebuilt/root/rfs_fat.ko:root/rfs_fat.ko \
-#    device/samsung/cooperve/prebuilt/root/rfs_glue.ko:root/rfs_glue.ko \
-#    device/samsung/cooperve/prebuilt/root/j4fs.ko:root/j4fs.ko \
-#    device/samsung/cooperve/prebuilt/root/sec_param.ko:root/sec_param.ko
-
 # Add LDPI assets, in addition to MDPI
 PRODUCT_AAPT_PREF_CONFIG := ldpi mdpi
 
