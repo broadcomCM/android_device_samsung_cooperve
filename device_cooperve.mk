@@ -12,22 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit products
-$(call inherit-product, device/samsung/bcm21553-common/common.mk)
-$(call inherit-product, vendor/samsung/cooperve/vendor.mk)
-
-# Add device package overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mdpi
-
-# Add LDPI assets, in addition to MDPI
-PRODUCT_AAPT_PREF_CONFIG := ldpi mdpi
-
-# Torch
+## Torch
 PRODUCT_PACKAGES += \
     Torch
 
-# Prebuilt Kernel - DELETE from the package
+## Prebuilt Kernel - DELETE from the package
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := device/samsung/cooperve/prebuilt/kernel
 else
@@ -36,3 +25,15 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+## Inherit products
+$(call inherit-product, device/samsung/bcm21553-common/common.mk)
+$(call inherit-product, vendor/samsung/cooperve/vendor.mk)
+
+## MDPI assets
+PRODUCT_AAPT_CONFIG := normal mdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
+
+## Inherit overlays
+DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mdpi

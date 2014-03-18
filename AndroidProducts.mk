@@ -17,6 +17,5 @@
 # configurations which are actually buildable (e.g. through lunch)
 #
 
-ifeq (cooperve,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/full_cooperve.mk
-endif
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/full_cooperve.mk
