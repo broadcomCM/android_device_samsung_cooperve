@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2010, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<device name="Android">
+  <!-- All values are in mA except as noted -->
+  <item name="none">0</item>
+  <item name="screen.on">256</item>
+  <item name="screen.full">318</item>
+  <item name="bluetooth.active">14.0</item>
+      <!--
+      Bluetooth stereo audio playback                          14.0 mA
+      -->
+  <item name="bluetooth.on">1.4</item>
+      <!--
+      I measured the following value                            1.4 mA
+      but there is a GPIO fix pending that should
+      bring this down to                                        0.2 mA
+      -->
+  <item name="wifi.on">2.9</item>
+  <item name="wifi.active">31.0</item>
+  <item name="wifi.scan">6.5</item>
+  <item name="dsp.audio">14.1</item>
+  <item name="dsp.video">54.0</item>
+  <item name="gps.on">29.7</item>
+  <item name="radio.active">71.5</item>
+  <item name="radio.scanning">1.2</item>
+  <array name="radio.on"> <!-- Strength 0 to BINS-1 (4) -->
+      <value>1.2</value>
+  </array>
+      <!-- Different CPU speeds as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
+  <array name="cpu.speeds">
+      <value>122</value> <!-- 122 MHz -->
+      <value>245</value> <!-- 245 MHz -->
+      <value>320</value> <!-- 320 MHz -->
+      <value>480</value> <!-- 480 MHz -->
+      <value>600</value> <!-- 600 MHz -->
+      <value>729</value> <!-- 729 MHz -->
+      <value>748</value> <!-- 748 MHz -->
+      <value>768</value> <!-- 768 MHz -->
+      <value>787</value> <!-- 787 MHz -->
+      <value>806</value> <!-- 806 MHz -->
+  </array>
+  <!-- Power consumption when CPU is idle -->
+  <item name="cpu.idle">3.8</item>
+  <item name="cpu.awake">54.6</item>
+  <!-- Power consumption at different speeds -->
+  <array name="cpu.active">
+      <value>122</value> <!-- 122 MHz -->
+      <value>245</value> <!-- 245 MHz -->
+      <value>320</value> <!-- 320 MHz -->
+      <value>480</value> <!-- 480 MHz -->
+      <value>600</value> <!-- 600 MHz -->
+      <value>729</value> <!-- 729 MHz -->
+      <value>748</value> <!-- 748 MHz -->
+      <value>768</value> <!-- 768 MHz -->
+      <value>787</value> <!-- 787 MHz -->
+      <value>806</value> <!-- 806 MHz -->
+  </array>
+  <!-- This is the battery capacity in mAh -->
+  <item name="battery.capacity">1350</item>
+      <!--
+      Battery capacity is 1350 mAH
+      -->
+</device>

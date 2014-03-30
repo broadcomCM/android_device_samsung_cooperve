@@ -23,7 +23,6 @@ LOCAL_PATH:= $(call my-dir)
 include device/samsung/bcm21553-common/BoardConfigCommon.mk
 
 # Board
-TARGET_BOARD_PLATFORM 				:= bcm21553
 TARGET_BOOTLOADER_BOARD_NAME 			:= cooperve
 
 # Recovery
@@ -50,5 +49,3 @@ BOARD_KERNEL_BASE				:= 0x81600000
 BOARD_KERNEL_PAGESIZE				:= 4096
 BOARD_PAGE_SIZE					:= 0x00001000
 BOARD_KERNEL_CMDLINE				:= 
-
-
