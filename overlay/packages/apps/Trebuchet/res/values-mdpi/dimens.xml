@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="workspace_cell_width_land">86.0dip</dimen>
+    <dimen name="workspace_cell_height_land">72.0dip</dimen>
+    <dimen name="workspace_cell_height_port">86.0dip</dimen>
+</resources>
