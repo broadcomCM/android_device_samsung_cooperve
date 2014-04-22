@@ -21,7 +21,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/samsung/tassve/ramdisk/init.cooperve.sensors.rc:root/init.cooperve.sensors.rc
+    device/samsung/cooperve/ramdisk/init.cooperve.sensors.rc:root/init.cooperve.sensors.rc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
