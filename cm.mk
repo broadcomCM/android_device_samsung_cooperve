@@ -5,7 +5,7 @@ $(call inherit-product, vendor/cm/config/gsm.mk)
 PRODUCT_RELEASE_NAME := cooperVE
 
 # BootAnimation
-TARGET_BOOTANIMATION_NAME := vertical-240x320
+TARGET_BOOTANIMATION_NAME := vertical-320x480
 
 # Inherit device configuration for cooperve
 $(call inherit-product, device/samsung/cooperve/full_cooperve.mk)

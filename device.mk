@@ -42,7 +42,7 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Prebuilt Kernel - DELETE from the package
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/tassve/prebuilt/kernel
+    LOCAL_KERNEL := device/samsung/cooperve/prebuilt/kernel
 else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
