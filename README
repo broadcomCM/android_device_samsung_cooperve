@@ -1,0 +1,9 @@
+Copyright 2014 - The CyanogenMod Project
+
+Device configuration for Samsung Galaxy Ace i (GT-S5830i)
+
+TO-DO: 
+
+- Fix Ramdisk compression format. Now all is compiled fine but common kernel doesn't have gzip ramdisk compression enabled. Build kernel and stop usig prebuilt kernel.
+
+See BCM21553 Common Repo for more
