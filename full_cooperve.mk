@@ -22,11 +22,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_small.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
 # Inherit device specific files
-$(call inherit-product, device/samsung/cooperve/device.mk)
+$(call inherit-product, device/samsung/cooperve/device_cooperve.mk)
 
 # Overrides
 PRODUCT_NAME := full_cooperve
 PRODUCT_DEVICE := cooperve
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
+PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-S5830i
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_CHARACTERISTICS := phone

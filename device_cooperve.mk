@@ -12,16 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit products
-$(call inherit-product, device/samsung/bcm21553-common/common.mk)
-$(call inherit-product, vendor/samsung/cooperve/vendor.mk)
-
-# Add device package overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
-
 # Init files
 PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/ramdisk/init.cooperve.sensors.rc:root/init.cooperve.sensors.rc
+    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.sensors.rc:root/init.gt-s5830iboard.sensors.rc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -36,16 +29,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Torch
 
-# LDPI assets
-PRODUCT_AAPT_CONFIG := normal mdpi ldpi
+# MDPI assets
+PRODUCT_AAPT_CONFIG := normal mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
-# Prebuilt Kernel - DELETE from the package
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/cooperve/prebuilt/kernel
-else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+# Inherit products
+$(call inherit-product, device/samsung/bcm21553-common/common.mk)
+$(call inherit-product, vendor/samsung/cooperve/vendor.mk)
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+# Add device package overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
