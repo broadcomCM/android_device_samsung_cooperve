@@ -1,9 +1,0 @@
-on fs
-
-# Correct Sensors Direction
-
-# accelerometer
-    write /sys/class/input/input3/position 3
-
-# geomagnetic
-    write /sys/class/input/input1/position 0
