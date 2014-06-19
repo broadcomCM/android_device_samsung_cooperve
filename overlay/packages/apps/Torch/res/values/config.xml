@@ -24,7 +24,7 @@ for different hardware and product builds. -->
     <bool name="useCameraInterface">false</bool>
 
     <!-- Full path to the sysfs toggle -->
-    <string name="flashDevice">/sys/class/camera/camera/camflash</string>
+    <string name="flashDevice">/sys/devices/virtual/camera/camera/camflash</string>
 
     <!-- Lowest setting -->
     <integer name="valueOn">1</integer>
