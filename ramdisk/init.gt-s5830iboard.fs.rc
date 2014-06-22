@@ -1,0 +1,79 @@
+on early-init
+
+    # create device nodes needed by kernel modules
+    mknod /dev/gememalloc  c 0666 151 0
+    mknod /dev/dpramerr    c 0660 255 0
+    mknod /dev/dpram0      c 0660 255 1
+    mknod /dev/dpram1      c 0660 255 2
+    mknod /dev/multipdp    c 0660 10  132
+    mknod /dev/h6270enc    c 0666 211 0
+    mknod /dev/hx170dec    c 0666 210 0
+    mknod /dev/ttySMD0     c 0666 235 4
+    mknod /dev/bml0        b 0660 137 0
+    mknod /dev/bml1        b 0660 137 1
+    mknod /dev/bml2        b 0660 137 2
+    mknod /dev/bml3        b 0660 137 3
+    mknod /dev/bml4        b 0660 137 4
+    mknod /dev/bml5        b 0660 137 5
+    mknod /dev/bml6        b 0660 137 6
+    mknod /dev/bml7        b 0660 137 7
+    mknod /dev/bml8        b 0660 137 8
+    mknod /dev/bml9        b 0770 137 9
+    mknod /dev/bml10       b 0770 137 10
+    mknod /dev/bml11       b 0770 137 11
+    mknod /dev/bml12       b 0770 137 12
+    mknod /dev/bml13       b 0770 137 13
+    mknod /dev/bml14       b 0770 137 14
+    mknod /dev/bml15       b 0770 137 15
+    mknod /dev/stl1        b 0660 138 1
+    mknod /dev/stl2        b 0660 138 2
+    mknod /dev/stl3        b 0660 138 3
+    mknod /dev/stl4        b 0660 138 4
+    mknod /dev/stl5        b 0660 138 5
+    mknod /dev/stl6        b 0660 138 6
+    mknod /dev/stl7        b 0660 138 7
+    mknod /dev/stl8        b 0660 138 8
+    mknod /dev/stl9        b 0755 138 9
+    mknod /dev/stl10       b 0755 138 10
+    mknod /dev/stl11       b 0755 138 11
+    mknod /dev/stl12       b 0755 138 12
+    mknod /dev/stl13       b 0755 138 13
+    mknod /dev/stl14       b 0755 138 14
+    mknod /dev/stl15       b 0755 138 15
+
+    chown radio system /dev/bml15
+
+on init
+
+# create device mountpoints
+    mkdir /mnt/.lfs 0755 root root
+    mkdir /efs 0771 radio system
+
+# create temp folder for nv
+    mkdir /dev/radionv
+    chown radio system /dev/radionv
+    chmod 0770 /dev/radionv
+
+# load FSR modules
+    insmod /lib/modules/fsr.ko
+    insmod /lib/modules/fsr_stl.ko
+
+# load RFS modules
+    insmod /lib/modules/rfs_glue.ko
+    insmod /lib/modules/rfs_fat.ko
+
+# load J4FS module
+    insmod /lib/modules/j4fs.ko
+
+on boot
+
+# load HANTRO decoding/encoding hardware modules
+    insmod /system/lib/modules/hx170dec.ko
+    insmod /system/lib/modules/h6270enc.ko
+    
+# load Broadcom USB Gadget modules
+    insmod /system/lib/modules/brcm_switch.ko
+    insmod /system/lib/modules/brcm_test_drv.ko
+      
+# load Broadcom Headset module
+    insmod /system/lib/modules/brcm-headsetsw.ko

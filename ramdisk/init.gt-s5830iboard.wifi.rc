@@ -1,0 +1,60 @@
+# Wi-Fi init file
+
+on post-fs-data
+    mkdir /data/misc/wifi 0775 wifi wifi
+    mkdir /data/misc/wifi/sockets 0775 wifi wifi
+    chmod 0775 /data/misc/wifi/sockets
+    chmod 0775 /data/misc/wifi
+    chmod 0775 /data/misc/wifi/wpa_supplicant.conf
+    chown wifi wifi /data/misc/wifi
+    chown wifi wifi /data/misc/wifi/wpa_supplicant.conf
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chown dhcp dhcp /data/misc/dhcp
+    chmod 0775 /data/misc/dhcp
+
+    chmod 0777 /data/misc/wifi/wl
+    chown wifi wifi /data/misc/wifi/wl
+    chmod 0777 /data/misc/wifi/iperf
+    chown wifi wifi /data/misc/wifi/iperf
+    chmod 0777 /data/misc/wifi/nvram.txt
+    chown wifi wifi /data/misc/wifi/nvram.txt
+    copy /system/etc/wifi/.nvmac.info /data/misc/wifi/.nvmac.info
+    chmod 0666 /data/misc/wifi/.nvmac.info
+    chown wifi wifi /data/misc/wifi/.nvmac.info
+
+# Let wifi control BT_VREG_CTL GPIO
+    chown wifi wifi /sys/class/gpio/gpio21/value
+    chmod 0664 /sys/class/gpio/gpio21/value
+
+service wpa_supplicant /system/bin/wpa_supplicant \
+    -ieth0 -Dwext -c/data/misc/wifi/wpa_supplicant.conf \
+    -e/data/misc/wifi/entropy.bin -O/data/misc/wifi/sockets
+    class main
+    socket wpa_eth0 dgram 0660 wifi wifi
+    disabled
+    oneshot
+
+service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
+    class main
+    disabled
+    oneshot
+
+service iprenew_eth0 /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+
+service wlandutservice /system/bin/wlandutservice
+    class main
+    disabled
+    oneshot
+
+# get MAC Addresses via RIL for WiFi & BT
+service get_macaddrs /system/bin/logwrapper /system/bin/get_macaddrs
+    class main
+    user root
+    oneshot
+    disabled
+
+on property:init.svc.ril-daemon=running
+    start get_macaddrs

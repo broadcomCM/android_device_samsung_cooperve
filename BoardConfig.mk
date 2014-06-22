@@ -29,12 +29,12 @@ TARGET_BOOTLOADER_BOARD_NAME			:= cooperve
 # Kernel
 #TARGET_KERNEL_CONFIG				:= cyanogenmod_cooperve_defconfig
 TARGET_PREBUILT_KERNEL				:= device/samsung/cooperve/prebuilt/kernel
-BOARD_KERNEL_BASE				:= 0x81600000
-BOARD_KERNEL_PAGESIZE				:= 4096
-BOARD_NAND_PAGE_SIZE				:= 4096 -s 128
-BOARD_PAGE_SIZE					:= 0x00001000
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING		:= ../../device/samsung/cooperve/recovery/recovery_ui.c
-BOARD_CUSTOM_GRAPHICS				:= ../../../device/samsung/cooperve/recovery/graphics.c
+BOARD_BOOTIMAGE_PARTITION_SIZE			:= 7357568
+BOARD_RECOVERYIMAGE_PARTITION_SIZE		:= 7357568
+BOARD_SYSTEMIMAGE_PARTITION_SIZE		:= 241172480
+BOARD_USERDATAIMAGE_PARTITION_SIZE		:= 206831616
+
+# Recovery
 TARGET_RECOVERY_FSTAB				:= device/samsung/cooperve/recovery.fstab

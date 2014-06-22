@@ -1,0 +1,29 @@
+on boot
+
+on property:sys.usb.config=rndis
+    exec /system/bin/ifconfig usb0 21.53.0.1 netmask 255.255.255.0 up
+    exec /system/bin/dnsProxy &
+    write /proc/brcm_switch 3
+    setprop sys.usb.state $sys.usb.config
+
+on property:sys.usb.config=rndis,adb
+    exec /system/bin/ifconfig usb0 21.53.0.1 netmask 255.255.255.0 up
+    exec /system/bin/dnsProxy &
+    write /proc/brcm_switch 3
+    start adbd
+    setprop sys.usb.state $sys.usb.config
+
+on property:sys.usb.config=mass_storage
+    write /proc/brcm_switch 2
+    setprop sys.usb.state $sys.usb.config
+
+on property:sys.usb.config=mass_storage,adb
+    write /proc/brcm_switch 2
+    start adbd
+    setprop sys.usb.state $sys.usb.config
+
+on property:sys.usb.config=rndis,dm
+    exec /system/bin/ifconfig usb0 21.53.0.1 netmask 255.255.255.0 up
+    exec /system/bin/dnsProxy &
+    write /proc/brcm_switch 3
+    setprop sys.usb.state $sys.usb.config

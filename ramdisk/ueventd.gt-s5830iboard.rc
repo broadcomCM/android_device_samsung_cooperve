@@ -1,0 +1,58 @@
+# fsr
+/dev/block/stl9           0770   root       root
+/dev/block/stl10          0770   root       root
+/dev/block/stl11          0770   root       root
+/dev/block/stl12          0770   root       root
+/dev/block/stl13          0770   root       root
+/dev/block/stl14          0770   root       root
+/dev/block/stl15          0770   root       root
+
+# serial
+/dev/ttyGS0               0771   system     system
+/dev/ttyS0                0600   system     system
+/dev/ttyS1                0660   bluetooth  net_bt_stack
+/dev/ttyS2                0600   gps        system
+
+/dev/ttyHS0               0600   bluetooth  bluetooth
+/dev/pmem_audio           0660   system     audio
+/dev/pmem_smipool*        0660   system     camera
+/dev/radio0               0640   fm_radio   fm_radio
+/dev/i2c-2                0660   root       system
+/dev/i2c-4                0660   root       system
+/dev/qce                  0660   system     audio
+/dev/q6venc               0660   system     audio
+/dev/qemu_trace           0666   system     system
+/dev/gemini0              0660   system     system
+
+# dpram
+/dev/dpram0               0660   radio      radio
+/dev/dpram1               0660   radio      radio
+/dev/dpramerr             0660   radio      radio
+/dev/multipdp             0660   radio      radio
+/dev/ttyCSD0              0660   radio      radio
+/dev/ttySMD0              0660   radio      radio
+/dev/ttyGPS0              0660   system     system
+/dev/ttyXTRA0             0660   system     system
+
+/dev/cache-ops            0666   root       root
+
+# sensors
+/dev/akm8975_dev          0660   system     system
+/dev/bma222               0660   root       system
+/dev/ecompass_ctrl        0660   root       system
+/dev/mmc328x              0660   root       system
+/dev/proximity            0660   root       system
+
+# broadcom
+/dev/bcm_alsa_pcg         0666   root       root
+/dev/bcm_alsa_voip        0660   radio      system
+/dev/bcm_atc              0660   shell      system
+/dev/bcm_cntin            0600   gps        system
+/dev/bcm_gps              0600   gps        system
+/dev/bcm_kpdp             0600   system     system
+/dev/bcm_kril             0660   root       radio
+/dev/bcm_vsp              0660   root       root
+/dev/v3d                  0666   root       root
+
+# camera
+/dev/camera               0660   system     camera

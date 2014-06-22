@@ -1,0 +1,42 @@
+on init
+
+# gps config (workaround)
+    symlink /system/etc/gps.conf /etc/gps.conf
+
+on post-fs-data
+
+# delete old sockets
+    exec /system/bin/rm -f /data/lcs.socket
+    exec /system/bin/rm -f /data/rilgps.socket
+
+on boot
+
+    write /sys/class/gpio/export 23
+    write /sys/class/gpio/export 56
+
+    chown gps system /sys/class/gpio/export
+    chown gps system /sys/class/gpio/gpio23/value
+    chown gps system /sys/class/gpio/gpio23/direction
+    chown gps system /sys/class/gpio/gpio56/value
+    chown gps system /sys/class/gpio/gpio56/direction
+
+    chown gps system /data/gps/glgpsctrl
+
+# define Broadcom GPS properties
+    setprop gps.fd.block "false"
+
+service gpsd /system/bin/glgps -c /system/etc/gps/glconfig4751.xml
+    class main
+    user gps
+    group system sdcard_rw inet net_raw
+
+on property:init.svc.gpsd=stopped
+    exec /system/bin/rm -f /data/lcs.socket
+    exec /system/bin/rm -f /data/rilgps.socket
+
+on property:init.svc.gpsd=running
+    wait /data/lcs.socket
+    chmod 0777 /data/lcs.socket
+    wait /data/rilgps.socket
+    chmod 0777 /data/rilgps.socket
+

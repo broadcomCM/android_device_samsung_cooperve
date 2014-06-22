@@ -1,0 +1,50 @@
+on post-fs-data
+
+# sensors folder
+    mkdir /data/misc/sensors 0777 system misc
+    chmod 0660 /data/misc/sensors/ecs_nvm
+    chmod 0660 /data/misc/sensors/accel_offset
+
+# backlight
+    chown system system /sys/class/backlight/aat1401-backlight/brightness
+    chown system system /sys/class/backlight/pwm-keypad-backlight.0/brightness
+
+# proximity
+    chown system input /sys/class/input/input0/delay
+    chown system input /sys/class/input/input0/enable
+    chown system input /sys/class/input/input0/poll_delay
+    chown system input /sys/class/input/input0/wake
+    chmod 0660 /sys/class/input/input0/enable
+    chmod 0660 /sys/class/input/input0/poll_delay
+
+# accelerometer
+    chown system input /sys/class/input/input3/delay
+    chown system input /sys/class/input/input3/enable
+    chown system input /sys/class/input/input3/position
+    chown system input /sys/class/input/input3/wake
+    write /sys/class/input/input3/position 3
+
+# geomagnetic
+    chown system input /sys/class/input/input1/delay
+    chown system input /sys/class/input/input1/enable
+    chown system input /sys/class/input/input1/position
+    chown system input /sys/class/input/input1/wake
+    write /sys/class/input/input1/position 0
+
+# geomagnetic_raw
+    chown compass input /sys/class/input/input2/offsets
+
+# orientation
+    chown system input /sys/class/input/input4/enable
+    chown system input /sys/class/input/input4/delay
+    chown system input /sys/class/input/input4/wake
+
+# led flash
+    chown radio system /sys/devices/virtual/camera/camera/camflash
+
+# accelerometer Service
+service memsicd /system/bin/memsicd
+    class main
+    user system
+    group system
+    oneshot

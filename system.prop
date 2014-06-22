@@ -3,51 +3,32 @@
 #
 
 # Dalvik
-dalvik.vm.stack-trace-file=/data/anr/traces.txt
-dalvik.vm.startheapsize=32m
-dalvik.vm.dexopt-data-only=1
-dalvik.vm.dexopt-flags=m=y
-dalvik.vm.heapsize=32m
 dalvik.vm.checkjni=false
+dalvik.vm.debug.alloc=0
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 dalvik.vm.execution-mode=int:jit
-dalvik.vm.lockprof.threshold=500
-ro.kernel.android.checkjni=1
-dev.sfbootcomplete=0
+dalvik.vm.heapgrowthlimit=36m
+dalvik.vm.heapsize=64m
+dalvik.vm.startheapsize=5m
 
 # Screen Rotation
 persist.sys.rotationanimation=false
 
-# Bluetooth
-net.bt.name=Android
-
 # RIL
 rild.libpath=/system/lib/libbrcm_ril.so
+ro.ril.disable.power.collapse=0 \
+ro.ril.gprsclass=10 \
+ro.ril.hsxpa=1 \
+ro.telephony.call_ring.delay=0 \
+ro.telephony.default_network=0 \
 ro.telephony.ril_class=samsung
-rild.libargs=-d /dev/smd0
-DEVICE_PROVISIONED=1
-ro.ril.ntmodeglobal=true
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
+ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock
 mobiledata.interfaces=pdp0,eth0,gprs,ppp0
-ro.telephony.call_ring.delay=0
-ro.ril.disable.power.collapse=0
 	
 # Display
 ro.sf.lcd_density=160
 qemu.sf.lcd_density=160
-video.accelerate.hw=1
-ro.opengles.version=131072
-
-# Google Location
-ro.com.google.locationfeatures=0
-ro.com.google.networklocation=0
 
 # Wifi interface
 wifi.interface=eth0
@@ -74,59 +55,3 @@ alsa.mixer.playback.bt.sco=BTHeadset
 alsa.mixer.capture.bt.sco=BTHeadset
 alsa.mixer.playback.bt.a2dp=BTHeadset
 alsa.mixer.capture.bt.a2dp=BTHeadset
-
-# Camera
-ro.media.enc.hprof.file.format=3gp
-ro.media.enc.lprof.file.format=3gp
-ro.media.enc.hprof.codec.vid=m4v
-ro.media.enc.lprof.codec.vid=h263
-ro.media.enc.hprof.codec.aud=aac
-ro.media.enc.lprof.codec.aud=amrnb
-ro.media.enc.hprof.vid.width=352
-ro.media.enc.lprof.vid.width=176
-ro.media.enc.hprof.vid.height=288
-ro.media.enc.lprof.vid.height=144
-ro.media.enc.hprof.vid.fps=30
-ro.media.enc.lprof.vid.fps=30
-ro.media.enc.hprof.vid.bps=384000
-ro.media.enc.lprof.vid.bps=192000
-ro.media.enc.hprof.aud.bps=23450
-ro.media.enc.lprof.aud.bps=23450
-ro.media.enc.hprof.aud.ch=1
-ro.media.enc.lprof.aud.ch=1
-ro.media.enc.hprof.aud.hz=8000
-ro.media.enc.lprof.aud.hz=8000
-ro.media.cam.preview.fps=15
-
-# Performance Tweaks
-ro.compcache.default=0
-persist.sys.use_dithering=0
-view.fading_edge_length=8v
-view.minimum_fling_velocity=25
-view.scroll_friction=0.008
-view.touch_slop=15 X
-debug.composition.type=mdp
-windowsmgr.max_events_per_sec=150
-debug.performance.tuning=1
-
-# CM parts hack
-persist.sys.use_16bpp_alpha=1
-persist.sys.jit-mode=int:jit
-persist.sys.jit-mode=1
-persist.sys.scrollingcache=3
-
-# Tweaks
-ro.setupwizard.enable_bypass=1
-persist.sys.purgeable_assets=1
-
-# DNS Fix
-net.dns1=8.8.8.8
-net.dns2=8.8.4.4
-net.rmnet0.dns1=8.8.8.8
-net.rmnet0.dns2=8.8.4.4
-net.gprs.dns1=8.8.8.8
-net.gprs.dns2=8.8.4.4
-net.ppp0.dns1=8.8.8.8
-net.ppp0.dns2=8.8.4.4
-net.eth0.dns1=8.8.8.8
-net.eth0.dns2=8.8.4.4
