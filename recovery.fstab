@@ -1,10 +1,10 @@
-# mount fstype device
+# mount 	fstype 		device
 
-/boot bml boot
-/cache ext4 /dev/block/stl10
-/data ext4 /dev/block/stl11
-/recovery bml recovery
-/sdcard vfat /dev/block/mmcblk0p1 /dev/block/mmcblk0
-/system ext4 /dev/block/stl9
-/sd-ext ext4 /dev/block/mmcblk0p2
+/boot 		bml 		boot
+/cache 		ext4		/dev/block/stl10
+/data 		ext4		/dev/block/stl11
+/recovery 	bml		recovery
+/sdcard 	vfat		/dev/block/mmcblk0p1	/dev/block/mmcblk0
+/system 	ext4		/dev/block/stl9
+/sd-ext 	ext4		/dev/block/mmcblk0p2
 
