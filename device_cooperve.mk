@@ -38,17 +38,30 @@ PRODUCT_DEVICE := cooperve
 PRODUCT_MODEL := gt-s5830i
 
 # Ramdisk
+#PRODUCT_COPY_FILES += \
+#    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.rc:root/init.gt-s5830i.rc \
+#    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.bt.rc:root/init.gt-s5830i.bt.rc \
+#    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.fs.rc:root/init.gt-s5830i.fs.rc \
+#    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.gps.rc:root/init.gt-s5830i.gps.rc \
+#    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.sensors.rc:root/init.gt-s5830i.sensors.rc \
+#    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.usb.rc:root/init.gt-s5830i.usb.rc \
+#    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.wifi.rc:root/init.gt-s5830i.wifi.rc \
+#    device/samsung/cooperve/ramdisk/init.recovery.gt-s5830iboard.rc:root/init.recovery.gt-s5830i.rc \
+#    device/samsung/cooperve/ramdisk/ueventd.gt-s5830iboard.rc:root/ueventd.gt-s5830i.rc \
+#    device/samsung/cooperve/recovery.fstab:root/recovery.fstab
+
+# Temporary ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.rc:root/init.gt-s5830i.rc \
-    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.bt.rc:root/init.gt-s5830i.bt.rc \
-    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.fs.rc:root/init.gt-s5830i.fs.rc \
-    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.gps.rc:root/init.gt-s5830i.gps.rc \
-    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.sensors.rc:root/init.gt-s5830i.sensors.rc \
-    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.usb.rc:root/init.gt-s5830i.usb.rc \
-    device/samsung/cooperve/ramdisk/init.gt-s5830iboard.wifi.rc:root/init.gt-s5830i.wifi.rc \
-    device/samsung/cooperve/ramdisk/init.recovery.gt-s5830iboard.rc:root/init.recovery.gt-s5830i.rc \
-    device/samsung/cooperve/ramdisk/ueventd.gt-s5830iboard.rc:root/ueventd.gt-s5830i.rc \
+    device/samsung/cooperve/ramdisk/init.gt-s5830i.rc:root/init.gt-s5830i.rc \
+    device/samsung/cooperve/ramdisk/ueventd.gt-s5830i.rc:root/ueventd.gt-s5830i.rc
+
+# Recovery fstab
+PRODUCT_COPY_FILES += \
     device/samsung/cooperve/recovery.fstab:root/recovery.fstab
+
+# Prebuilt init
+#PRODUCT_COPY_FILES += \
+#    device/samsung/cooperve/ramdisk/init:root/init
 
 # Hardware specific
 PRODUCT_COPY_FILES += \
@@ -57,7 +70,6 @@ PRODUCT_COPY_FILES += \
 # Torch
 PRODUCT_PACKAGES += \
     Torch
-
 
 # Media Profiles
 PRODUCT_COPY_FILES += \

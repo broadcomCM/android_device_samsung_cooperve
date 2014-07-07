@@ -1,4 +1,4 @@
-import init.gt-s5830iboard.fs.rc
+import init.gt-s5830i.fs.rc
 
 on boot
     setprop ro.radio.noril yes

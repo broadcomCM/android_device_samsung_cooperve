@@ -26,7 +26,6 @@ on boot
     setprop gps.fd.block "false"
 
 service gpsd /system/bin/glgps -c /system/etc/gps/glconfig4751.xml
-    class main
     user gps
     group system sdcard_rw inet net_raw
 

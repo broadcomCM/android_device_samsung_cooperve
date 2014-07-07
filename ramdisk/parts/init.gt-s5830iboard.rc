@@ -20,6 +20,27 @@ on init
     # vold.fstab (workaround)
     symlink /system/etc/vold.fstab /etc/vold.fstab
 
+# create device mountpoints
+    mkdir /mnt/.lfs 0755 root root
+    mkdir /efs 0771 radio system
+
+# create temp folder for nv
+    mkdir /dev/radionv
+    chown radio system /dev/radionv
+    chmod 0770 /dev/radionv
+
+# load FSR modules
+    insmod /lib/modules/fsr.ko
+    insmod /lib/modules/fsr_stl.ko
+
+# load RFS modules
+    insmod /lib/modules/rfs_glue.ko
+    insmod /lib/modules/rfs_fat.ko
+
+# load J4FS module
+    insmod /lib/modules/j4fs.ko
+
+
 on fs
 
 # mount device partitions

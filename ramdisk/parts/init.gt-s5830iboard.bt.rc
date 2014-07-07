@@ -14,12 +14,10 @@ on boot
     setprop ro.bt.bdaddr_path "/data/.nvmac_bt.info"
 
 service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
-    class main
     disabled
     oneshot
 
 service iprenew_bt-pan /system/bin/dhcpcd -n
-    class main
     disabled
     oneshot
 
@@ -27,7 +25,6 @@ service hciattach /system/bin/brcm_patchram_plus \
     --patchram /system/etc/firmware/BCM4330B1_002.001.003.0634.0652.hcd \
     --baudrate 3000000 --enable_hci --use_baudrate_for_download \
     --i2s=1,1,0,1 --no2bytes --tosleep 50000 /dev/ttyS1
-    class main
     user bluetooth
     group bluetooth net_bt_admin
     disabled

@@ -31,10 +31,12 @@ TARGET_BOOTLOADER_BOARD_NAME			:= cooperve
 TARGET_PREBUILT_KERNEL				:= device/samsung/cooperve/prebuilt/kernel
 
 # Recovery
+BOARD_PROVIDES_BOOTMODE				:= true
 BOARD_BOOTIMAGE_PARTITION_SIZE			:= 7357568
 BOARD_RECOVERYIMAGE_PARTITION_SIZE		:= 7357568
 BOARD_SYSTEMIMAGE_PARTITION_SIZE		:= 241172480
 BOARD_USERDATAIMAGE_PARTITION_SIZE		:= 206831616
+TARGET_RECOVERY_INITRC				:= device/samsung/cooperve/ramdisk/recovery.rc
 
 # Recovery
 TARGET_RECOVERY_FSTAB				:= device/samsung/cooperve/recovery.fstab
