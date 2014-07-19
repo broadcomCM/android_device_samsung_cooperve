@@ -27,7 +27,6 @@ TARGET_BOARD_PLATFORM				:= bcm21553
 TARGET_BOOTLOADER_BOARD_NAME			:= cooperve
 
 # Kernel
-#TARGET_KERNEL_CONFIG				:= cyanogenmod_cooperve_defconfig
 TARGET_PREBUILT_KERNEL				:= device/samsung/cooperve/prebuilt/kernel
 
 # Recovery
@@ -40,3 +39,6 @@ TARGET_RECOVERY_INITRC				:= device/samsung/cooperve/ramdisk/recovery.rc
 
 # Recovery
 TARGET_RECOVERY_FSTAB				:= device/samsung/cooperve/recovery.fstab
+
+# OTA Override
+TARGET_OTA_ASSERT_DEVICE			:= cooperve,GT-S5830i,gt-s5830i

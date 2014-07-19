@@ -16,26 +16,12 @@
 $(call inherit-product, device/samsung/bcm21553-common/common.mk)
 $(call inherit-product, vendor/samsung/cooperve/vendor_blobs.mk)
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# This is where we'd set a backup provider if we had one
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
-
 # Add device package overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/cooperve/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mdpi
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
-
 # Add LDPI assets, in addition to MDPI
-    PRODUCT_LOCALES += ldpi mdpi
-
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := cooperve
-PRODUCT_DEVICE := cooperve
-PRODUCT_MODEL := gt-s5830i
+PRODUCT_LOCALES += mdpi ldpi
 
 # Ramdisk
 #PRODUCT_COPY_FILES += \
@@ -74,6 +60,11 @@ PRODUCT_PACKAGES += \
 # Media Profiles
 PRODUCT_COPY_FILES += \
     device/samsung/cooperve/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
+
+# Enable repeatable keys in CWM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cwm.enable_key_repeat=true \
+    ro.cwm.repeatable_keys=114,115
 
 # Prebuilt Kernel - DELETE from the package
 ifeq ($(TARGET_PREBUILT_KERNEL),)
