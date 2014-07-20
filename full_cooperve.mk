@@ -41,7 +41,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_cooperve
+PRODUCT_NAME := full_cooperve
 PRODUCT_DEVICE := cooperve
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-S5830i
